@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Yanael</title>
-    <link>https://st3w4r.github.io/blog/tags/</link>
+    <link>https://yanael.io/tags/</link>
     <description>Recent content in Tags on Yanael</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="https://st3w4r.github.io/blog/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://yanael.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

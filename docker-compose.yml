@@ -3,15 +3,18 @@ version: '3'
 services:
 
   build:
-    image: klakegg/hugo:0.70.0
+    image: hugo
+    command: hugo
+    working_dir: "/app"
     volumes:
-      - ".:/src"
-      - "./public:/target"
+      - ".:/app"
+      - "./public:/app/public"
 
   server:
-    image: klakegg/hugo:0.70.0
-    command: server
+    image: hugo
+    command: hugo server --bind="0.0.0.0" --buildDrafts
+    working_dir: "/app"
     volumes:
-      - ".:/src"
+      - ".:/app"
     ports:
       - "1313:1313"

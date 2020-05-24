@@ -1,8 +1,7 @@
 baseURL = "https://yanael.io/"
 languageCode = "en-us"
-title = "Yanael"
-theme = "arabica"
-#theme = "hugo-cactus-theme"
+title = "Yanaël Barbier"
+theme = "neutral"
 
 [params]
     description = "I build my path with an export!"
@@ -11,3 +10,9 @@ theme = "arabica"
     twitter = "YanaelBarbier"
     github = "https://github.com/st3w4r"
 
+[menu]
+
+  [[menu.main]]
+    name = "Main"
+    url = "/"
+    weight = -100

@@ -16,3 +16,8 @@ theme = "neutral"
     name = "Main"
     url = "/"
     weight = -100
+
+  [[menu.main]]
+    name = "Blog"
+    url = "https://moonshot.engineer"
+    weight = -95

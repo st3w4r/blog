@@ -7,8 +7,25 @@ body {
     font-size: 17px;
     line-height: 32px;
     padding: 10em 2em 2em 2em;
-    color: rgb(0,0,0,0.8);
     font-family: "Iowan Old Style","Iowan","Charter","Palatino Linotype","Palatino","Book Antiqua","Palatino LT STD",Times New Roman,serif;
+}
+
+
+body {
+    color: rgb(0,0,0,0.8);
+    background-color: #fff;
+}
+
+.meta-day-to-day {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.meta-date {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.subtitle {
+    color: rgba(0, 0, 0, 0.5);
 }
 
 a {
@@ -23,13 +40,11 @@ a:hover {
 .meta-day-to-day {
     font-size: 15px;
     font-style: italic;
-    color: rgba(0, 0, 0, 0.5);
 }
 
 .meta-date {
     font-size: 15px;
     font-style: italic;
-    color: rgba(0, 0, 0, 0.5);
 }
 
 .previous-title {
@@ -54,5 +69,23 @@ nav span {
     margin-top: 0px;
     margin-bottom: 20px;
     font-style: italic;
-    color: rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    body {
+        color: rgba(255, 255, 255, .7);
+        background-color: #0e2439;
+    }
+
+    .meta-day-to-day {
+        color: rgba(255, 255, 255, .5);
+    }
+
+    .meta-date {
+        color: rgba(255, 255, 255, .5);
+    }
+
+    .subtitle {
+        color: rgba(255, 255, 255, .5);
+    }
 }

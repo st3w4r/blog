@@ -8,9 +8,7 @@
         </div>
         {{ end }}
     </header>
-    <section>
-        {{ .Content }}
-    </section>
+    {{ .Content }}
     {{ if eq .Type "page" }}
         <footer>
             <p>Updated on {{ .Date.Format "2 January 2006" }}</p>

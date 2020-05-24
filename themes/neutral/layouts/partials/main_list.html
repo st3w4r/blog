@@ -9,9 +9,7 @@
                 {{ end}}
             </h2>
         </header>
-        <section>
-            <div>{{.Summary}} <span class='read-more'><a href="{{ .Permalink }}">Read more</a></span></div>
-        </section>
+        <div>{{.Summary}} <span class='read-more'><a href="{{ .Permalink }}">Read more</a></span></div>
         <footer>
             <div class='meta-date'>
                 <time datetime="{{.Date.Format "2006-01-02T15:04:05Z0700" }}">{{ .Date.Format "2 January 2006" }}</time>

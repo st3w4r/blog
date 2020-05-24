@@ -6,7 +6,6 @@ theme = "neutral"
 [params]
     description = "I build my path with an export!"
     dateFormatToUse = "2006-01-02"
-    replaceGoogleFonts = "fonts.loli.net"
     twitter = "YanaelBarbier"
     github = "https://github.com/st3w4r"
 

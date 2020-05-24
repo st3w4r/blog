@@ -1,0 +1,29 @@
+{{ define "main" }}
+<main>
+        <header>
+            <h2>{{.Title}}</h2>
+        </header>
+        {{.Content}}
+    <ul>
+    {{ range .Pages.ByDate.Reverse }}
+        {{if eq .Params.type "day_to_day"}}
+            <li>
+                <a href="{{.Permalink}}">{{.Title}}</a>
+            </li>
+            <div class="meta-day-to-day">
+                <span>{{.Params.number_of_days}} days</span>
+                <span>-</span>
+                <span>{{.Date.Format "2006-01-02"}}</span>
+            </div>
+        {{else}}
+            <li>
+                <a href="{{.Permalink}}">{{.Title}}</a>
+            </li>
+            <div class="meta-date">
+                <span>{{.Date.Format "2006-01-02"}}</span>
+            </div>
+        {{end}}
+    {{ end }}
+    </ul>
+</main>
+{{ end }}

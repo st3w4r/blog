@@ -1,0 +1,12 @@
+{{ define "main" }}
+<h2>{{ .Title }}</h2>
+{{ if eq .Type "article" }}
+<div class='meta-date'>
+    <time datetime="{{.Date.Format "2006-01-02T15:04:05Z0700" }}">{{ .Date.Format "2 January 2006" }}</time>
+</div>
+{{ end }}
+{{ .Content }}
+{{ if eq .Type "page" }}
+<p>Updated on {{ .Date.Format "2 January 2006" }}</p>
+{{ end }}
+{{ end }}

@@ -1,0 +1,4 @@
+[submodule "public"]
+	path = public
+	url = https://github.com/st3w4r/st3w4r.github.io.git
+	branch = gh-pages

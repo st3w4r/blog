@@ -4,6 +4,7 @@ title = "Yanaël Barbier"
 theme = "neutral"
 
 [params]
+    subtitle = "I build my path with an export!"
     description = "I build my path with an export!"
     dateFormatToUse = "2006-01-02"
     twitter = "YanaelBarbier"

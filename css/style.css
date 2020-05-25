@@ -37,6 +37,14 @@ a:hover {
     text-decoration: underline;
 }
 
+p a {
+    text-decoration: underline;
+}
+
+p a:hover {
+    color: rgba(0, 0, 0, 0.5);
+}
+
 .meta-day-to-day {
     font-size: 15px;
     font-style: italic;

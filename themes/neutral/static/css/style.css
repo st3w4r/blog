@@ -37,11 +37,11 @@ a:hover {
     text-decoration: underline;
 }
 
-p a {
+article a {
     text-decoration: underline;
 }
 
-p a:hover {
+article a:hover {
     color: rgba(0, 0, 0, 0.5);
 }
 
@@ -94,6 +94,10 @@ nav span {
     }
 
     .subtitle {
+        color: rgba(255, 255, 255, .5);
+    }
+
+    article a:hover {
         color: rgba(255, 255, 255, .5);
     }
 }

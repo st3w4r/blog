@@ -9,6 +9,6 @@ Hey, I’m Yanael, never away from a keyboard, learning, designing and building 
 Startups and Silicon Valley enthusiast, I spent some time in the Bay Area, drinking Blue Bottle’s and owning a Patagonia jacket.
 
 I like to chat with people when it starts with:  
-> _I don’t shave, I drink coffee and the the art of UNIX programming is on my nightstand._
+> _I don’t shave, I drink coffee and The Art of UNIX Programming is on my nightstand._
 
 If you want to know more: [Ping me!](/networks)

@@ -31,10 +31,16 @@ body {
 a {
     color: inherit;
     text-decoration: none;
+    outline: none;
+}
+
+a:active {
+    outline: none;
 }
 
 a:hover {
     text-decoration: underline;
+    outline: none;
 }
 
 article a {

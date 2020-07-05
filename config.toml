@@ -9,6 +9,7 @@ theme = "neutral"
     dateFormatToUse = "2006-01-02"
     twitter = "YanaelBarbier"
     github = "https://github.com/st3w4r"
+    assetDir = "themes/neutral/assets"
 
 [menu]
 
@@ -21,3 +22,10 @@ theme = "neutral"
     name = "Blog"
     url = "https://moonshot.engineer"
     weight = -95
+
+
+[outputs]
+  home = ["HTML", "RSS"]
+
+[outputFormats.RSS]
+  baseName = "rss"

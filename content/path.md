@@ -1,6 +1,6 @@
 ---
 title: "Path"
-date: 2020-10-08T21:51:15Z
+date: 2020-10-08T00:00:00Z
 draft: false
 menu:
     main:

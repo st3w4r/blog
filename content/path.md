@@ -1,6 +1,6 @@
 ---
 title: "Path"
-date: 2020-10-08T00:00:00Z
+date: 2021-06-20T00:00:00Z
 draft: false
 menu:
     main:
@@ -10,7 +10,8 @@ menu:
 It’s a small world, so I just want to share some places where I used to live.
 `export PATH=`
 
-- Lisbon, Portugal, October 2020 - Currently
+- Porto, Portugal, May 2021  - Currently
+- Lisbon, Portugal, 7 months 2020 - 2021
 - London, UK, 1 year 2019 - 2020
 - Cary, North Carolina, USA, 2 months 2019
 - Paris, France, 3 years 2017 - 2019

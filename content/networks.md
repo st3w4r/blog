@@ -1,6 +1,6 @@
 ---
 title: "Networks"
-date: 2020-05-25T00:24:30Z
+date: 2021-06-20T00:00:00Z
 draft: false
 menu:
     main:

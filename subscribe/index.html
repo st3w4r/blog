@@ -2,4 +2,8 @@
 <span><a href=/path/>Path</a></span>
 <span><a href=/networks/>Networks</a></span>
 <span><a href=/about/>About</a></span>
-<span><a href=/subscribe/>Subscribe</a></span></nav></div><main><main><header><h2>Categories</h2></header><ul></ul></main></main></body></html>
+<span><a href=/subscribe/>Subscribe</a></span></nav></div><main><article><header><h2>Subscribe</h2></header><p>To receive my fresh articles and day-to-day posts:</p><p>RSS: <a href=https://yanael.io/rss.xml>https://yanael.io/rss.xml</a></p><p><form id=form-subscribe action=https://formspree.io/f/mleopdlv method=post><label>Email:</label>
+<input type=email name=email>
+<button id=form-subscribe-button>Subscribe</button><p id=form-subscribe-status></p></form><script>window.addEventListener("DOMContentLoaded",function(){var form=document.getElementById("form-subscribe");var button=document.getElementById("form-subscribe-button");var status=document.getElementById("form-subscribe-status");function success(){form.reset();button.style="display: none ";status.innerHTML="Thanks!";}
+function error(){status.innerHTML="Oops! There was a problem.";}
+form.addEventListener("submit",function(ev){ev.preventDefault();var data=new FormData(form);ajax(form.method,form.action,data,success,error);});});function ajax(method,url,data,success,error){var xhr=new XMLHttpRequest();xhr.open(method,url);xhr.setRequestHeader("Accept","application/json");xhr.onreadystatechange=function(){if(xhr.readyState!==XMLHttpRequest.DONE)return;if(xhr.status===200){success(xhr.response,xhr.responseType);}else{error(xhr.status,xhr.response,xhr.responseType);}};xhr.send(data);}</script></p><footer><p>Updated on 14 February 2021</p></footer></article></main></body></html>

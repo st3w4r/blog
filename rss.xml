@@ -1,3 +1,59 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Main on Yanaël Barbier</title><link>https://yanael.io/</link><description>Recent content in Main on Yanaël Barbier</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 24 May 2020 15:35:55 +0000</lastBuildDate><atom:link href="https://yanael.io/rss.xml" rel="self" type="application/rss+xml"/><item><title>Networks</title><link>https://yanael.io/networks/</link><pubDate>Sun, 20 Jun 2021 00:00:00 +0000</pubDate><guid>https://yanael.io/networks/</guid><description>The Social Network one of my most inspiring movie but you&amp;rsquo;ll not find the Zuck&amp;rsquo;s website in this list:
-Twitter GitHub LinkedIn</description></item><item><title>Path</title><link>https://yanael.io/path/</link><pubDate>Sun, 20 Jun 2021 00:00:00 +0000</pubDate><guid>https://yanael.io/path/</guid><description>It’s a small world, so I just want to share some places where I used to live. export PATH=
-Porto, Portugal, May 2021 - Currently Lisbon, Portugal, 7 months 2020 - 2021 London, UK, 1 year 2019 - 2020 Cary, North Carolina, USA, 2 months 2019 Paris, France, 3 years 2017 - 2019 San Francisco, California, USA, 7 months 2016 - 2017 Paris, France, 2 years 2014 - 2016 Barcelona, Spain, 2 months 2014 Grenoble, France, 2 years 2012-2014 Tournon-sur-Rhône, Ardèche, France, 3 years 2009 - 2012 Home sweet home, Ardèche, France 16 years 1993 - 2009</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Yanaël Barbier</title><link>https://yanael.io/</link><description>Recent content on Yanaël Barbier</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 01 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://yanael.io/rss.xml" rel="self" type="application/rss+xml"/><item><title>Path</title><link>https://yanael.io/path/</link><pubDate>Sat, 16 Oct 2021 00:00:00 +0000</pubDate><guid>https://yanael.io/path/</guid><description>&lt;p>It’s a small world, so I just want to share some places where I used to live.
+&lt;code>export PATH=&lt;/code>&lt;/p>
+&lt;ul>
+&lt;li>Porto, Portugal, May 2021 - Currently&lt;/li>
+&lt;li>Lisbon, Portugal, 7 months 2020 - 2021&lt;/li>
+&lt;li>London, UK, 1 year 2019 - 2020&lt;/li>
+&lt;li>Cary, North Carolina, USA, 2 months 2019&lt;/li>
+&lt;li>Paris, France, 3 years 2017 - 2019&lt;/li>
+&lt;li>San Francisco, California, USA, 7 months 2016 - 2017&lt;/li>
+&lt;li>Paris, France, 2 years 2014 - 2016&lt;/li>
+&lt;li>Barcelona, Spain, 2 months 2014&lt;/li>
+&lt;li>Grenoble, France, 2 years 2012-2014&lt;/li>
+&lt;li>Tournon-sur-Rhône, Ardèche, France, 3 years 2009 - 2012&lt;/li>
+&lt;li>Home sweet home, Ardèche, France 16 years 1993 - 2009&lt;/li>
+&lt;/ul></description></item><item><title>Networks</title><link>https://yanael.io/networks/</link><pubDate>Sun, 20 Jun 2021 00:00:00 +0000</pubDate><guid>https://yanael.io/networks/</guid><description>&lt;p>&lt;a href="https://en.wikipedia.org/wiki/The_Social_Network">The Social Network&lt;/a> one of my most inspiring movie but you&amp;rsquo;ll not find the Zuck&amp;rsquo;s website in this list:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://twitter.com/YanaelBarbier">Twitter&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/st3w4r">GitHub&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.linkedin.com/in/yanaelbarbier/?locale=en_US">LinkedIn&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Subscribe</title><link>https://yanael.io/subscribe/</link><pubDate>Sun, 14 Feb 2021 00:00:00 +0000</pubDate><guid>https://yanael.io/subscribe/</guid><description>&lt;p>To receive my fresh articles and day-to-day posts:&lt;/p>
+&lt;p>RSS: &lt;a href="https://yanael.io/rss.xml
+">https://yanael.io/rss.xml
+&lt;/a>&lt;/p>
+&lt;p>&lt;form id="form-subscribe"
+action="https://formspree.io/f/mleopdlv"
+method="POST"
+>
+&lt;label>Email:&lt;/label>
+&lt;input type="email" name="email" />
+&lt;button id="form-subscribe-button">Subscribe&lt;/button>
+&lt;p id="form-subscribe-status">&lt;/p>
+&lt;/form>
+&lt;script>
+window.addEventListener("DOMContentLoaded",function(){var form=document.getElementById("form-subscribe");var button=document.getElementById("form-subscribe-button");var status=document.getElementById("form-subscribe-status");function success(){form.reset();button.style="display: none ";status.innerHTML="Thanks!";}
+function error(){status.innerHTML="Oops! There was a problem.";}
+form.addEventListener("submit",function(ev){ev.preventDefault();var data=new FormData(form);ajax(form.method,form.action,data,success,error);});});function ajax(method,url,data,success,error){var xhr=new XMLHttpRequest();xhr.open(method,url);xhr.setRequestHeader("Accept","application/json");xhr.onreadystatechange=function(){if(xhr.readyState!==XMLHttpRequest.DONE)return;if(xhr.status===200){success(xhr.response,xhr.responseType);}else{error(xhr.status,xhr.response,xhr.responseType);}};xhr.send(data);}
+&lt;/script>
+&lt;/p></description></item><item><title>Init</title><link>https://yanael.io/articles/init/</link><pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate><guid>https://yanael.io/articles/init/</guid><description>&lt;p>Everything starts with an init.&lt;/p>
+&lt;p>It&amp;rsquo;s a perfect time to release my new project, Moonshot Engineer, a place where I can share my learnings and my views mostly about tech, startups, software, and data.&lt;/p>
+&lt;h2 id="root-cause">Root cause&lt;/h2>
+&lt;p>One thing I love the most is understanding how people work in their day to day basis. Jump in or starting a new project require to understand how the project works, what’s the purpose and goals of it, aligned with the philosophy behind it. From the outside we can see the inputs and the outputs, but the pipe between is most of the time hidden. Focus on the pipe, what’s inside, how things are made behind the hood? What were the decisions, the different proposals, the challenges, the methods, the tools, and why these choices were made?&lt;/p>
+&lt;p>All of these questions are hard to answer when you don&amp;rsquo;t work with the team or in the company itself, and that&amp;rsquo;s what I want to discover, the unshared stories. One great thing is that, in the software community, open source is almost the root culture and, that can help us to explore and understand how things are made! So it will be one of the most used channels to try to understand stories.&lt;/p>
+&lt;h2 id="behind-the-rocket">Behind the rocket&lt;/h2>
+&lt;p>We have seen with the last SpaceX launch people interested in the software and the hardware that support this kind of technology. Some people tried to discover how things are made by aggregating conversations from engineers to understand how they implemented things. And discovering new technics and methods and maybe try to solve their problems with a different approach.&lt;/p>
+&lt;h2 id="implementation">Implementation&lt;/h2>
+&lt;p>That’s the question, how the implementation looks like? Two different projects can produce the same output but what’s the difference between those two, how they are built. At some point in a project, we face new challenges, and sometimes these challenges were already tackled by others and we can save time to directly ask them what works and what doesn’t. We don’t have to delegate or skip steps because it’s what makes us learn but avoiding getting stuck and having another point of view, that the thing. The actual learning will come when we start the implementation.&lt;/p>
+&lt;h2 id="changelog">Changelog&lt;/h2>
+&lt;p>We start with assumptions and lots of changes happen during the journey getting only the final state doesn’t lighten the full story. So logging the journey can help to understand the starting point and the path followed to reach the landing point.&lt;/p>
+&lt;p>This place is where I will share my logs.&lt;/p>
+&lt;h2 id="next-step">NeXT STEP&lt;/h2>
+&lt;p>Let&amp;rsquo;s dig in!&lt;/p></description></item><item><title>About</title><link>https://yanael.io/about/</link><pubDate>Sun, 24 May 2020 15:35:55 +0000</pubDate><guid>https://yanael.io/about/</guid><description>&lt;p>Hey, I’m Yanael, never away from a keyboard, learning, designing and building software. Currently working as a Software Engineer for a &lt;a href="https://sprout.ai">startup&lt;/a> in London, I’m handling data in my day to day basis. Formerly in Paris where I studied at &lt;a href="http://42.fr">42&lt;/a> and had different company experiences along the way.&lt;/p>
+&lt;p>Startups and Silicon Valley enthusiast, I spent some time in the Bay Area, drinking Blue Bottle’s and owning a Patagonia jacket.&lt;/p>
+&lt;p>I like to chat with people when it starts with:&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;em>I don’t shave, I drink coffee and The Art of UNIX Programming is on my nightstand.&lt;/em>&lt;/p>
+&lt;/blockquote>
+&lt;p>If you want to know more: &lt;a href="https://yanael.io/networks">Ping me!&lt;/a>&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted --></description></item></channel></rss>

@@ -1,0 +1,4 @@
+{{ $subscribe := resources.Get "js/subscribe.js" | minify }}
+<script>
+{{ $subscribe.Content | safeJS }}
+</script>

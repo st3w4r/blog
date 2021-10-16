@@ -13,14 +13,16 @@
             <div class="meta-day-to-day">
                 <span>{{.Params.number_of_days}} days</span>
                 <span>-</span>
-                <span>{{.Date.Format "2006-01-02"}}</span>
+                <!-- <span>{{.Date.Format "2006-01-02"}}</span> -->
+                <time datetime="{{.Date.Format "2006-01-02T15:04:05Z0700" }}">{{ .Date.Format "2006-01-02" }}</time>
             </div>
         {{else}}
             <li>
                 <a href="{{.Permalink}}">{{.Title}}</a>
             </li>
             <div class="meta-date">
-                <span>{{.Date.Format "2006-01-02"}}</span>
+                <!-- <span>{{.Date.Format "2006-01-02"}}</span> -->
+                <time datetime="{{.Date.Format "2006-01-02T15:04:05Z0700" }}">{{ .Date.Format "2006-01-02" }}</time>
             </div>
         {{end}}
     {{ end }}

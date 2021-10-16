@@ -1,10 +1,10 @@
 ---
 title: "Path"
-date: 2021-06-20T00:00:00Z
+date: 2021-10-16T00:00:00Z
 draft: false
 menu:
     main:
-        weight: -85
+        weight: -70
 ---
 
 It’s a small world, so I just want to share some places where I used to live.

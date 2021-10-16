@@ -1,7 +1,7 @@
-{{ range first 3 (where .Site.RegularPages.ByDate.Reverse "Type" "in"  "article, day_to_day") }}
+{{ range (where .Site.RegularPages.ByDate.Reverse "Type" "in"  "articles, day_to_day") }}
     <article>
         <header>
-            <h2>
+            <h2 class='previous-title'>
                 {{ if eq .Type "day_to_day"}}
                 <a href="{{ .Permalink }}">Day to Day: {{ .Title }}</a>
                 {{ else }}
@@ -9,34 +9,10 @@
                 {{ end}}
             </h2>
         </header>
-        <div>{{.Summary}} <span class='read-more'><a href="{{ .Permalink }}">Read more</a></span></div>
         <footer>
             <div class='meta-date'>
                 <time datetime="{{.Date.Format "2006-01-02T15:04:05Z0700" }}">{{ .Date.Format "2 January 2006" }}</time>
             </div>
         </footer>
     </article>
-{{ end }}
-{{ if after 3 (where .Site.RegularPages.ByDate.Reverse "Type" "in"  "articles, day_to_day")}}
-<div>
-    <hr>
-</div>
-{{ range after 3 (where .Site.RegularPages.ByDate.Reverse "Type" "in"  "articles, day_to_day") }}
-    <article>
-        <header>
-            <h3 class='previous-title'>
-                {{ if eq .Type "day_to_day"}}
-                <a href="{{ .Permalink }}">Day to Day: {{ .Title }}</a>
-                {{ else }}
-                <a href="{{ .Permalink }}">{{ .Title }}</a>
-                {{ end}}
-            </h3>
-        </header>
-        <footer>
-            <div class='meta-date'>
-                <time datetime="{{.Date.Format "2006-01-02T15:04:05Z0700" }}">{{ .Date.Format "2 January 2006" }}</time>
-            </div>
-        </footer>
-    </article>
-{{ end }}
 {{ end }}

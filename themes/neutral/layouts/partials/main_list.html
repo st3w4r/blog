@@ -1,13 +1,13 @@
 {{ range (where .Site.RegularPages.ByDate.Reverse "Type" "in"  "articles, day_to_day") }}
     <article>
         <header>
-            <h3 class='previous-title'>
+            <h2 class='previous-title'>
                 {{ if eq .Type "day_to_day"}}
                 <a href="{{ .Permalink }}">Day to Day: {{ .Title }}</a>
                 {{ else }}
                 <a href="{{ .Permalink }}">{{ .Title }}</a>
                 {{ end}}
-            </h3>
+            </h2>
         </header>
         <footer>
             <div class='meta-date'>

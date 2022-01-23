@@ -12,7 +12,7 @@ services:
 
   server:
     image: hugo
-    command: hugo server --bind="0.0.0.0" ${OPTIONS} # --buildDrafts
+    command: hugo server --bind="0.0.0.0" ${OPTIONS}  --buildDrafts
     working_dir: "/app"
     volumes:
       - ".:/app"

@@ -49,7 +49,7 @@ a:hover {
 
 
 article a {
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 article a:hover {
@@ -78,6 +78,10 @@ nav a:hover {
 
 .previous-title {
     margin-bottom: 0px;
+}
+
+.previous-title a {
+    text-decoration: none;
 }
 
 .read-more {

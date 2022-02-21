@@ -47,12 +47,14 @@ a:hover {
     outline: none;
 }
 
+
 article a {
     text-decoration: underline;
 }
 
 article a:hover {
     color: rgba(0, 0, 0, 0.5);
+    text-decoration: underline;
 }
 
 
@@ -76,6 +78,10 @@ nav a:hover {
 
 .previous-title {
     margin-bottom: 0px;
+}
+
+.previous-title a {
+    text-decoration: none;
 }
 
 .read-more {

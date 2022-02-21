@@ -9,15 +9,15 @@ type: "article"
 
 Today the Software as a Service model is quite common, it gives access to an hosted and managed product. The client can be focus on the business value and, it can only care on the quality of the service and the availability. All the management of the software, servers and infrastructure, is no longer a question, with this model someone else takes care of it.
 
-The SaaS model is a model that allows you to grow fast with less constraints. Because you manage your product and the resources you need to make it scale. The responsibility of maintaining a good quality of service remain principally on you.
+The SaaS model allow you to grow fast with less constraints, because you manage your product direction and the resources you need to make it scale. By design you are accountable to maintain a good quality of service.
 
-Technical constraints are reduced because you can avoid dealing with the client system. Technical compatibility appear in the integration part but not on the design choices made inside the product. You can chose your language, stack, structure, practices, to make your service run.
+Technical constraints are reduced because you can avoid dealing with the client system. Technical compatibility appear in the integration part but not on the design decisions made inside the product. You can chose your language, stack, structure, practices, to make your service run.
 
-Focus on the business needs not the technical depth requirements of your clients.
+You can focus on the business needs not the technical depth requirements of your clients.
 
 ## Serve or Distribute
 
-In software as a service imply to serve your service and when it is needed it can be called via internet. Certain service are accessible though a web interface others will have an API to access it. In this pattern the service need to be online.
+A software as a service imply to serve your service, it can then be called via a network/internet. Certain service are accessible though a web interface others will have an API to access it. In this pattern the service need to be online.
 
 But there is a different approach to provide your software, you can bundle it and distribute it. Like the current application model on your phone and the famous AppStore. Your application is prepared, bundled and sent to the store where people can download it and use it directly on their phone. This model allow the offline mode. You can distribute your software the same way, your client will install it on their system. Some challenges will hit when an update have to be done. Now it only rely on the user if they did or not the update. You can combine the two model to enable your full product potential.
 
@@ -25,7 +25,7 @@ But there is a different approach to provide your software, you can bundle it an
 
 The way you will provide your software can have an impact on the overall architecture. If you chose to have an online service where users can connect to it and use your product directly, you can design you service as a one product that can support multiple user or a product that can support one user but you start multiple instance of your product to serve more client.
 
-A simple diagram to represent the architecture:
+A simple representation of the architecture:
 
 _Multi tenancy, multi client product:_
 ```
@@ -73,11 +73,11 @@ At an infrastructure level the application is not touched and the boundaries bet
 
 Acting at different level have an impact on the business itself, the resources allocated will be different, the teams require different skillset. At an application level Software Engineer are more involved, at an infrastructure level DevOps will be the main actors.
 
-As well designing your product at an infrastructure level can allow flexibility in term of distribution. Your product can be instanced in another place on another server. But with this approach some constraints exist. The communication between clients will be more complex. It can be an advantage to keep your client data separated but features that federate data and allow interaction can be more complex to put in place.
+As well designing your product at an infrastructure level can allow flexibility in term of distribution. Your product can be instanced in another place on another server. But with this approach some constraints exist. The communication between clients will be more complex. It can be an advantage to keep your client data separated but features that federate data and allow interaction can be more complex to build.
 
 Regarding data storage, at an application level we can create one central database where all the tenants data are stored. The separation can be made into the database with difference users, tables, schemas.
 
-At an infrastructure level we have to deploy a new database for this client and manage this database independently from the other DB. So the data are well separated but it will not allow you to do cross tenant queries. If you want to aggregate data from every clients you have to run a query on each DB. Also sharing common data required a different approach. Instead using one table and allow all the user to query it, it need to be available in another specific DB or duplicated into each DB.
+At an infrastructure level we have to deploy a new database per client and manage this database independently from the other DBs. So the data are well separated but it will not allow you to do cross tenant queries. If you want to aggregate data from every clients you have to run a query on each DB. Also sharing common data required a different approach. Instead using one table and allow all the user to query it, it need to be available in another specific DB or duplicated into each DB.
 
 Deployment of a new version
 
@@ -98,13 +98,17 @@ If we assume we want to distribute the same product to multiples different clien
 - Resources: Each instance requires it's own resources and have to be managed independently
 - Infrastructure constraints: Where you deploy your application can also have an impact on the design of it. Indeed if we deploy on a certain cloud provider some features/tools may be implemented differently or may be not accessible at all.
 
-Standardization can avoid complex management, to have a replica instead of a custom version of your product per client.
+Standardization can avoid complex management, to have a replica instead of a custom version of your product per client will help.
 
 Cloud lock can be mitigated by containers, open source, and avoiding cloud native services.
 
 ## Distribution isn’t integration
 
 After to have built a software you want to distribute it, above we described two different way to distribute it.
+
+Now how do you make your software interacting with the client system. This is the role of an integration. It does not impact your internal system but only the I/O of it. You can create many integration to enable different usecases.
+
+e.g.: API REST, S3 connector, Kafka, or even ipc, etc
 
 The integration part describe how your software will connect to the rest of the system. An integration can be different based on the way you chose to distribute the software. This step deal with the design and the architecture.
 
@@ -114,11 +118,11 @@ The impacts of software distribution on the architecture:
 
 Cost
 
-By building a service on your infrastructure you have to manage the cost as well and reducing resources usage to cut the bills become a real thing. Combining services, using common caching, etc. This kind of cost reduction can be made with less friction when you manage the infrastructure.
+By building a service on your infrastructure you have to manage the cost, cutting the bills become a real thing, resources usage is a concern. Combining services, using shared caching, ... This kind of cost reduction can be made with less friction when you manage the infrastructure.
 
 Move fast
 
-Delegate tasks and adding vendors in the loop decrease the flexibility you have and create bottlenecks that can lead to slow iteration. If your product is deployed on premise you will have to deal with the tech team of your client to make any change or update.
+Delegate tasks and adding vendors in the loop decrease the flexibility you have and create bottlenecks that can lead to slow iteration. If your product is deployed on premise you will have to deal with the tech team of your client to make any fix or update.
 
 Security
 
@@ -132,7 +136,7 @@ Distributing your service through an API you manage who can access it and they a
 
 ## In the wild
 
-If we look at [Sentry.io](http://sentry.io) this tool is a perfect example, they chose to entirely [open sourced](https://github.com/getsentry/sentry) the tool and they also provide Sentry as a SaaS. The product open sourced manage only one organization to manage multiples organization like they do for their SaaS  they have built other tools to manage multiples instances.
+If we look at [Sentry.io](http://sentry.io) this tool is a perfect example, they chose to entirely [open sourced](https://github.com/getsentry/sentry) the tool and they also provide Sentry as a SaaS. The product open sourced manage only one organization, to manage multiples organization like they do for their SaaS  they have built other tools to manage multiples instances.
 
 GitLab have the same pattern, they have an open source version and they have a cloud service you can directly subscribe and they manage the instance for you. The open source version is only for one organization if you want to have multiple organization you need to start new instances. So this is handled at an infrastructure level.
 
@@ -149,7 +153,7 @@ or _Single tenant:_
 | App     | App      | App     |
 ```
 
-Building at an application level or at an infrastructure level requires different skills and have an impact on the team resource. This choice will have an impact down the line and need to be aligned with the business objectives.
+Building at an application level or at an infrastructure level requires different skills and have an impact on the team resource. This choice will have an effect down the line and need to be aligned with the business objectives.
 \
 \
 \

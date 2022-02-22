@@ -1,5 +1,5 @@
 ---
-title: "Application vs Infrastructure level"
+title: "Application vs infrastructure level"
 date: 2020-07-18
 draft: true
 type: "article"

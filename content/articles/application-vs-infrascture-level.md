@@ -5,6 +5,8 @@ draft: true
 type: "article"
 ---
 
+Different approaches to construct a product for multiple clients.
+
 ## SaaS
 
 Today the Software as a Service model is quite common, it gives access to a hosted and managed product. The client can focus on the business value and, it can only care about the quality of the service and the availability. All the management of the software, servers, and infrastructure, is no longer a question, with this model someone else takes care of it.

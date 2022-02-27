@@ -1,6 +1,6 @@
 ---
 title: "Application vs infrastructure level"
-date: 2020-07-18
+date: 2022-02-27
 draft: true
 type: "article"
 ---
@@ -9,7 +9,7 @@ _TL;DR: Application level --> Software Engineer; Infrastructure level --> DevOps
 
 ## SaaS
 
-Software as a Service, the approach that lets you build the way you want without worrying about the support of multi-platforms.
+Software as a Service is the approach that lets you build the way you want without worrying about the support of multi-platforms.
 
 Technical compatibility appears in the integration part but not on the design decisions made inside the product. You can choose your language, stack, structure, practices, to make your service run.
 
@@ -23,7 +23,7 @@ But there is a different approach to provide your software: **bundling and distr
 
 ## Architecture
 
-The way you provide your software can have an impact on the overall architecture. If you choose to have an online service where users can connect to it and use your product directly, you can design your service as one product that can support multiple users or a product that can support one user but you start multiple instances of your product to serve more clients.
+The way you provide your software can have an impact on the overall architecture. If you choose to have an online service where users can connect to it and use your product directly, you can design your service as one product that can **support multiple users** or a product that can **support one user** but you start multiple instances of your product to serve more clients.
 
 A simple representation of the architecture:
 
@@ -68,7 +68,7 @@ _Levels:_
 +-------------+
 ```
 
-If you want to handle multi-tenants at an application level, you have to build the permissions system into the application itself, define what a user can do and access. The limit and boundaries live inside the application.
+If you want to handle multi-tenants at an application level, you have to build the **permissions system into the application itself**, define what a user can do and access. The limit and boundaries live inside the application.
 
 At an infrastructure level, the application is not touched and the boundaries between users are made into the infrastructure configuration, like a new server or networking settings.
 
@@ -80,7 +80,7 @@ Regarding data storage, at an application level, you can create one central data
 
 At an infrastructure level, you have to deploy a new database per client and manage this database independently from the other DBs. So the data is well separated but it will not allow you to do cross tenant queries. If you want to aggregate data from every client you have to run a query on each DB. Also, sharing common data requires a different approach: instead of using one table and allowing all the users to query it, the table needs to be available in another common DB or duplicated into each DB.
 
-Deployment of a new version
+**Deployment of a new version**
 
 When you work at an application level, all the clients can get access to the latest version of your product as soon as you release it.
 
@@ -92,12 +92,12 @@ With that in mind, this kind of distribution will impact the design of the appli
 
 Designing an application to be able to run either as SaaS or on-premise requires a different architecture and comes with new challenges to solve.
 
-If you assume that you want to distribute the same product to multiple clients, the challenges you have to solve are:
+If you want to distribute the **same product to multiple clients**, the challenges you have to solve are:
 
-- Version management: if you update the software, how can you distribute the updates across the different instances?
-- Monitoring: how do you monitor multiple applications and aggregate the status of the service?
-- Resources: each instance requires its own resources and has to be managed independently.
-- Infrastructure constraints: where you deploy our application can also have an impact on its design. Indeed, if you deploy on a certain cloud provider some features/tools may be implemented differently or may not be accessible at all.
+- **Version management:** if you update the software, how can you distribute the updates across the different instances?
+- **Monitoring:** how do you monitor multiple applications and aggregate the status of the service?
+- **Resources:** each instance requires its own resources and has to be managed independently.
+- **Infrastructure constraints:** where you deploy our application can also have an impact on its design. Indeed, if you deploy on a certain cloud provider some features/tools may be implemented differently or may not be accessible at all.
 
 Standardization can avoid complex management. Having a replica instead of a custom version of your product per client will help.
 
@@ -105,11 +105,11 @@ Standardization can avoid complex management. Having a replica instead of a cust
 
 ## Distribution isn’t integration
 
-After to have built the software you want to distribute. Above we described two different ways to distribute it.
+After having built the software you want to distribute. _Above we described two different ways to distribute it: SaaS or Bundle_
 
 Now how do you make your software **interact with the client system**? This is the role of **integration**. It does not impact your internal system but only the I/O of it. You can create many integrations to enable different use cases.
 
-e.g.: API REST, S3 connector, Kafka, or even ipc, etc
+**e.g.:** API REST, S3 connector, Kafka, or even ipc, etc
 
 The integration part describes how your software will connect to the rest of the system. An integration can be different based on the way you chose to distribute the software. This step deals with the design and the architecture.
 
@@ -117,44 +117,50 @@ The integration part describes how your software will connect to the rest of the
 
 The impacts of software distribution on the architecture:
 
-Cost
+**Cost**
 
 By building a service on your infrastructure, you have to manage the cost: cutting the bills becomes a real thing, resources usage is a concern. So you can combine services, use shared caching, ... This kind of cost reduction can be made with less friction when you manage the infrastructure.
 
-Move fast
+**Move fast**
 
 Delegating tasks and adding vendors in the loop decrease the flexibility you have and create bottlenecks that can lead to slow iterations. If your product is deployed on-premise you will have to deal with the tech team of your client to make any fix or update.
 
-Security
+**Security**
 
 Security becomes a thing when you deploy on-premise, as you rely on the security of your customer infrastructure. But your tool can also bring security holes in their system. Miss-configuration due to a lack of knowledge of the targeted system becomes a real weakness. You have to take care of the security of the software you built but the infrastructure security will rely mostly on the customer.
 
-Intellectual Property
+**Intellectual Property**
 
 By the time you distribute the binary or the source code, you can’t protect yourself anymore against someone stealing your work. Only licenses, contracts, and laws can protect you against that. But the technical barriers are almost gone.
 
-Distributing your service through an API you manage who can access it and they are only allowed to execute it, the intellectual property can be more protected with that form of distribution.
+Distributing your service through an API allows you to manage who can access it and they are only allowed to execute it, the intellectual property can be more protected with that form of distribution.
 
 ## In the wild
 
 If you look at [Sentry.io](http://sentry.io) this tool is a perfect example, they chose to entirely [open source](https://github.com/getsentry/sentry) the product and they also provide Sentry as a SaaS. The product manages only one organization. To manage multiple organizations as they do for their SaaS, they have built other tools to manage multiple instances.
 
-GitLab has the same pattern, they have an open-source version and they have a cloud service you can directly subscribe to, and they manage the instance for you. The open-source version is only for one organization; if you want to have multiple organizations you need to start new instances. So this is handled at an infrastructure level.
+GitLab has the same pattern, they have an open-source version and they have a cloud service you can directly subscribe to, and they manage the instance for you. The open-source version is only for one organization; if you want to have **multiple organizations you need to start new instances**. So this is handled at an infrastructure level.
 
 ## So what
 
 _Multi tenancy:_
 ```
-| Tenant 1| Tenant 2 | Tenant 3|
-|            App               |
++--------------------------------+
+| Tenant 1 | Tenant 2 | Tenant 3 |
++--------------------------------+
+|              App               |
++--------------------------------+
 ```
 or _Single tenant:_
 ```
-| Tenant 1| Tenant 2 | Tenant 3|
-| App     | App      | App     |
++--------------------------------+
+| Tenant 1 | Tenant 2 | Tenant 3 |
++----------|----------|----------+
+|   App    |   App    |   App    |
++--------------------------------+
 ```
 
-Building at an application level or at an infrastructure level requires different skills and has an impact on the team resource. This choice will have an effect down the line and need to be aligned with the business objectives.
+Build at an application level or at an infrastructure level requires different skills and has an impact on the team resource. This choice will have an effect down the line and need to be aligned with the business objectives.
 \
 \
 \

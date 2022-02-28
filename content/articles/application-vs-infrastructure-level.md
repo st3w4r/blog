@@ -5,7 +5,7 @@ draft: true
 type: "article"
 ---
 
-_TL;DR: Application level --> Software Engineer; Infrastructure level --> DevOps_
+_TL;DR: Some design decisions can have a broader impact on all the business, from the people you will hire to what you will be able to sell to your client._
 
 ## SaaS
 
@@ -19,11 +19,11 @@ In short: you can focus on the business needs, not on the requirements due to th
 
 Software as a Service implies to serve your service, it can then be called via a network and/or the Internet. Certain services are accessible through a web interface others will have an API to access it. In this pattern, the service needs to be online.
 
-But there is a different approach to provide your software: **bundling and distributing it** Like the current application model on your phone and the famous AppStore. Your application is prepared, bundled, and sent to the store where people can download it and use it directly on their phones. This model allows the offline mode. You can distribute your software the same way, your client will install it on their system. Some challenges will hit when an update has to be done. Now it only relies on the user if they did or not the update. You can **combine the two models to enable your full product potential.**
+But there is a different approach to provide your software: **bundling and distributing it**. Like the current application model on your phone and the famous AppStore. Your application is prepared, bundled, and sent to the store where people can download it and use it directly on their phones. This model allows the offline mode. Some challenges will hit when an update has to be done. Now it only relies on the user if they did or not the update. You can **combine the two models to enable your full product potential.**
 
 ## Architecture
 
-The way you provide your software can have an impact on the overall architecture. If you choose to have an online service where users can connect to it and use your product directly, you can design your service as one product that can **support multiple users** or a product that can **support one user** but you start multiple instances of your product to serve more clients.
+The way you provide your software can have an impact on the overall architecture. If you choose to have an online service where users can connect to it and use your product directly, you can design your service as one product that can **support multiple users**, or a product that can **support one user** but you start multiple instances of your product to serve more clients.
 
 A simple representation of the architecture:
 
@@ -80,7 +80,7 @@ Regarding data storage, at an application level, you can create one central data
 
 At an infrastructure level, you have to deploy a new database per client and manage this database independently from the other DBs. So the data is well separated but it will not allow you to do cross tenant queries. If you want to aggregate data from every client you have to run a query on each DB. Also, sharing common data requires a different approach: instead of using one table and allowing all the users to query it, the table needs to be available in another common DB or duplicated into each DB.
 
-**Deployment of a new version**
+### Deployment of a new version
 
 When you work at an application level, all the clients can get access to the latest version of your product as soon as you release it.
 
@@ -105,31 +105,31 @@ Standardization can avoid complex management. Having a replica instead of a cust
 
 ## Distribution isn’t integration
 
-After having built the software you want to distribute. _Above we described two different ways to distribute it: SaaS or Bundle_
+After having built the software you want to distribute. Above we described two different ways to distribute it: SaaS or Bundle.
 
 Now how do you make your software **interact with the client system**? This is the role of **integration**. It does not impact your internal system but only the I/O of it. You can create many integrations to enable different use cases.
 
 **e.g.:** API REST, S3 connector, Kafka, or even ipc, etc
 
-The integration part describes how your software will connect to the rest of the system. An integration can be different based on the way you chose to distribute the software. This step deals with the design and the architecture.
+The integration part describes how your software will connect to the rest of the system. An integration can be different based on the way you choose to distribute the software. This step deals with the design and the architecture.
 
 ## Impacts
 
 The impacts of software distribution on the architecture:
 
-**Cost**
+### Cost
 
 By building a service on your infrastructure, you have to manage the cost: cutting the bills becomes a real thing, resources usage is a concern. So you can combine services, use shared caching, ... This kind of cost reduction can be made with less friction when you manage the infrastructure.
 
-**Move fast**
+### Move fast
 
 Delegating tasks and adding vendors in the loop decrease the flexibility you have and create bottlenecks that can lead to slow iterations. If your product is deployed on-premise you will have to deal with the tech team of your client to make any fix or update.
 
-**Security**
+### Security
 
 Security becomes a thing when you deploy on-premise, as you rely on the security of your customer infrastructure. But your tool can also bring security holes in their system. Miss-configuration due to a lack of knowledge of the targeted system becomes a real weakness. You have to take care of the security of the software you built but the infrastructure security will rely mostly on the customer.
 
-**Intellectual Property**
+### Intellectual Property
 
 By the time you distribute the binary or the source code, you can’t protect yourself anymore against someone stealing your work. Only licenses, contracts, and laws can protect you against that. But the technical barriers are almost gone.
 

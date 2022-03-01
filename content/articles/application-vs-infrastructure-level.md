@@ -1,19 +1,19 @@
 ---
 title: "Application vs infrastructure level"
-date: 2022-02-27
-draft: true
+date: 2022-03-01
+draft: false
 type: "article"
 ---
 
-_TL;DR: Some design decisions can have a broader impact on all the business, from the people you will hire to what you will be able to sell to your client._
+_TL;DR: Choosing at which level you will act is an early and fundamental decision for your product, it needs to be carefully decided because it will impact the business broadly._
 
 ## SaaS
 
-Software as a Service is the approach that lets you build the way you want without worrying about the support of multi-platforms.
+Software as a Service is the approach that lets you **build the way you want** without worrying about the support of multi-platforms.
 
 Technical compatibility appears in the integration part but not on the design decisions made inside the product. You can choose your language, stack, structure, practices, to make your service run.
 
-In short: you can focus on the business needs, not on the requirements due to the technical debt of your clients.
+In short: you can **focus on the business needs**, not on the requirements due to the technical debt of your clients.
 
 ## Serve or Distribute
 

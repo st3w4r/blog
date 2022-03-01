@@ -5,7 +5,7 @@ draft: false
 type: "article"
 ---
 
-_TL;DR: Choosing at which level you will act is an early and fundamental decision for your product, it needs to be carefully decided because it will impact the business broadly._
+_TL;DR: Choosing at which level between application or infrastructure you will act is an early and fundamental decision for your product, it needs to be carefully decided because it will impact the business broadly._
 
 ## SaaS
 

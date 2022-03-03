@@ -97,7 +97,7 @@ If you want to distribute the **same product to multiple clients**, the challeng
 - **Version management:** if you update the software, how can you distribute the updates across the different instances?
 - **Monitoring:** how do you monitor multiple applications and aggregate the status of the service?
 - **Resources:** each instance requires its own resources and has to be managed independently.
-- **Infrastructure constraints:** where you deploy our application can also have an impact on its design. Indeed, if you deploy on a certain cloud provider some features/tools may be implemented differently or may not be accessible at all.
+- **Infrastructure constraints:** where you deploy your application can also have an impact on its design. Indeed, if you deploy on a certain cloud provider some features/tools may be implemented differently or may not be accessible at all.
 
 Standardization can avoid complex management. Having a replica instead of a custom version of your product per client will help.
 

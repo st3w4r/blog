@@ -54,7 +54,7 @@
 &lt;li>&lt;strong>Version management:&lt;/strong> if you update the software, how can you distribute the updates across the different instances?&lt;/li>
 &lt;li>&lt;strong>Monitoring:&lt;/strong> how do you monitor multiple applications and aggregate the status of the service?&lt;/li>
 &lt;li>&lt;strong>Resources:&lt;/strong> each instance requires its own resources and has to be managed independently.&lt;/li>
-&lt;li>&lt;strong>Infrastructure constraints:&lt;/strong> where you deploy our application can also have an impact on its design. Indeed, if you deploy on a certain cloud provider some features/tools may be implemented differently or may not be accessible at all.&lt;/li>
+&lt;li>&lt;strong>Infrastructure constraints:&lt;/strong> where you deploy your application can also have an impact on its design. Indeed, if you deploy on a certain cloud provider some features/tools may be implemented differently or may not be accessible at all.&lt;/li>
 &lt;/ul>
 &lt;p>Standardization can avoid complex management. Having a replica instead of a custom version of your product per client will help.&lt;/p>
 &lt;p>“Cloud lock” can be mitigated by containers, open-source, and avoiding cloud-native services.&lt;/p>

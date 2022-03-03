@@ -29,7 +29,7 @@
 - Product: Instance for client n
 ...
 &lt;/code>&lt;/pre>&lt;p>These two models of architecture imply a lot of differences under the hood and come with their advantages and constraints. It has an impact at a different level.&lt;/p>
-&lt;p>The first approach manages the multi-tenant at an application level, the second one handles the multi-tenant at an infrastructure level.&lt;/p>
+&lt;p>The first approach manages the &lt;strong>multi-tenant at an application level&lt;/strong>, the second one handles the &lt;strong>multi-tenant at an infrastructure level&lt;/strong>.&lt;/p>
 &lt;p>This has an impact at different levels of the stack:&lt;/p>
 &lt;p>&lt;em>Levels:&lt;/em>&lt;/p>
 &lt;pre>&lt;code>+-------------+
@@ -39,16 +39,16 @@
 +-------------+
 &lt;/code>&lt;/pre>&lt;p>If you want to handle multi-tenants at an application level, you have to build the &lt;strong>permissions system into the application itself&lt;/strong>, define what a user can do and access. The limit and boundaries live inside the application.&lt;/p>
 &lt;p>At an infrastructure level, the application is not touched and the boundaries between users are made into the infrastructure configuration, like a new server or networking settings.&lt;/p>
-&lt;p>Acting at a different level has an impact on the business itself, the resources allocated will be different, and the teams will require a different skillset. At an application level, Software Engineers are more involved, and at an infrastructure level, DevOps will be the main actors.&lt;/p>
-&lt;p>As well, designing your product at an infrastructure level can allow flexibility in terms of distribution. Your product can be instanced in another place on another server. But with this approach, some constraints exist. The communication between clients will be more complex. It can be an advantage to keep your client data separated but features that federate data and allow interaction can be more complex to build.&lt;/p>
+&lt;p>Acting at a different level has an impact on the business itself, the resources allocated will be different, and the teams will require a different skillset. At an &lt;strong>application level, Software Engineers&lt;/strong> are more involved, and at an &lt;strong>infrastructure level, DevOps&lt;/strong> will be the main actors.&lt;/p>
+&lt;p>As well, designing your product at an infrastructure level can allow flexibility in terms of distribution. Your product can be instanced in another place on another server. But with this approach, some constraints exist. The &lt;strong>communication between clients will be more complex&lt;/strong>. It can be an advantage to keep your client data separated but features that federate data and allow interaction can be more complex to build.&lt;/p>
 &lt;p>Regarding data storage, at an application level, you can create one central database where all the tenants&amp;rsquo; data is stored. The separation can be made into the database with different users, tables and schemas.&lt;/p>
 &lt;p>At an infrastructure level, you have to deploy a new database per client and manage this database independently from the other DBs. So the data is well separated but it will not allow you to do cross tenant queries. If you want to aggregate data from every client you have to run a query on each DB. Also, sharing common data requires a different approach: instead of using one table and allowing all the users to query it, the table needs to be available in another common DB or duplicated into each DB.&lt;/p>
 &lt;h3 id="deployment-of-a-new-version">Deployment of a new version&lt;/h3>
-&lt;p>When you work at an application level, all the clients can get access to the latest version of your product as soon as you release it.&lt;/p>
-&lt;p>At an infrastructure level, releasing a new version means deploying a new version for each client independently.&lt;/p>
-&lt;p>This question between application level and infrastructure level is becoming more obvious when you have to work on-premise. Deploying an application on the client infrastructure directly brings new challenges and if you have built a multi-tenant application it will not make sense to deploy that application on the client infrastructure. Indeed, you want to distribute only one instance of the application to the client and not a system to manage multiple instances of the application.&lt;/p>
+&lt;p>When you work at an application level, all the clients can get &lt;strong>access to the latest version&lt;/strong> of your product as soon as you release it.&lt;/p>
+&lt;p>At an infrastructure level, releasing a new version means &lt;strong>deploying&lt;/strong> a new version for each client &lt;strong>independently&lt;/strong>.&lt;/p>
+&lt;p>This question between application level and infrastructure level is becoming more obvious when you have to work &lt;strong>on-premise&lt;/strong>. Deploying an application on the client infrastructure directly brings new challenges and if you have built a multi-tenant application it will not make sense to deploy that application on the client infrastructure. Indeed, you want to distribute only one instance of the application to the client and &lt;strong>not a system to manage multiple instances of the application&lt;/strong>.&lt;/p>
 &lt;p>With that in mind, this kind of distribution will impact the design of the application.&lt;/p>
-&lt;p>Designing an application to be able to run either as SaaS or on-premise requires a different architecture and comes with new challenges to solve.&lt;/p>
+&lt;p>Designing an application to be able to &lt;strong>run either as SaaS or on-premise&lt;/strong> requires a different architecture and comes with new challenges to solve.&lt;/p>
 &lt;p>If you want to distribute the &lt;strong>same product to multiple clients&lt;/strong>, the challenges you have to solve are:&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>Version management:&lt;/strong> if you update the software, how can you distribute the updates across the different instances?&lt;/li>
@@ -56,7 +56,7 @@
 &lt;li>&lt;strong>Resources:&lt;/strong> each instance requires its own resources and has to be managed independently.&lt;/li>
 &lt;li>&lt;strong>Infrastructure constraints:&lt;/strong> where you deploy your application can also have an impact on its design. Indeed, if you deploy on a certain cloud provider some features/tools may be implemented differently or may not be accessible at all.&lt;/li>
 &lt;/ul>
-&lt;p>Standardization can avoid complex management. Having a replica instead of a custom version of your product per client will help.&lt;/p>
+&lt;p>Standardization can avoid complex management. Having a &lt;strong>replica instead of a custom version&lt;/strong> of your product per client will help.&lt;/p>
 &lt;p>“Cloud lock” can be mitigated by containers, open-source, and avoiding cloud-native services.&lt;/p>
 &lt;h2 id="distribution-isnt-integration">Distribution isn’t integration&lt;/h2>
 &lt;p>After having built the software you want to distribute. Above we described two different ways to distribute it: SaaS or Bundle.&lt;/p>
@@ -66,13 +66,13 @@
 &lt;h2 id="impacts">Impacts&lt;/h2>
 &lt;p>The impacts of software distribution on the architecture:&lt;/p>
 &lt;h3 id="cost">Cost&lt;/h3>
-&lt;p>By building a service on your infrastructure, you have to manage the cost: cutting the bills becomes a real thing, resources usage is a concern. So you can combine services, use shared caching, &amp;hellip; This kind of cost reduction can be made with less friction when you manage the infrastructure.&lt;/p>
+&lt;p>By building a service on your infrastructure, you have to manage the cost: cutting the bills becomes a real thing, resources usage is a concern. So you can &lt;strong>combine services, use shared caching, &amp;hellip;&lt;/strong> This kind of cost reduction can be made with less friction when you manage the infrastructure.&lt;/p>
 &lt;h3 id="move-fast">Move fast&lt;/h3>
-&lt;p>Delegating tasks and adding vendors in the loop decrease the flexibility you have and create bottlenecks that can lead to slow iterations. If your product is deployed on-premise you will have to deal with the tech team of your client to make any fix or update.&lt;/p>
+&lt;p>Delegating tasks and adding &lt;strong>vendors&lt;/strong> in the loop decrease the flexibility you have and create &lt;strong>bottlenecks&lt;/strong> that can lead to slow iterations. If your product is deployed on-premise you will have to deal with the tech team of your client to make any fix or update.&lt;/p>
 &lt;h3 id="security">Security&lt;/h3>
-&lt;p>Security becomes a thing when you deploy on-premise, as you rely on the security of your customer infrastructure. But your tool can also bring security holes in their system. Miss-configuration due to a lack of knowledge of the targeted system becomes a real weakness. You have to take care of the security of the software you built but the infrastructure security will rely mostly on the customer.&lt;/p>
+&lt;p>Security becomes a thing when you deploy on-premise, as you rely on the security of your customer infrastructure. But your tool can also bring security holes in their system. Miss-configuration due to a &lt;strong>lack of knowledge&lt;/strong> of the targeted system becomes a real weakness. You have to take care of the security of the software you built but the infrastructure security will rely mostly on the customer.&lt;/p>
 &lt;h3 id="intellectual-property">Intellectual Property&lt;/h3>
-&lt;p>By the time you distribute the binary or the source code, you can’t protect yourself anymore against someone stealing your work. Only licenses, contracts, and laws can protect you against that. But the technical barriers are almost gone.&lt;/p>
+&lt;p>By the time you distribute the binary or the source code, you can’t protect yourself anymore against someone stealing your work. Only licenses, contracts, and laws can protect you against that. But the &lt;strong>technical barriers are almost gone&lt;/strong>.&lt;/p>
 &lt;p>Distributing your service through an API allows you to manage who can access it and they are only allowed to execute it, the intellectual property can be more protected with that form of distribution.&lt;/p>
 &lt;h2 id="in-the-wild">In the wild&lt;/h2>
 &lt;p>If you look at &lt;a href="http://sentry.io">Sentry.io&lt;/a> this tool is a perfect example, they chose to entirely &lt;a href="https://github.com/getsentry/sentry">open source&lt;/a> the product and they also provide Sentry as a SaaS. The product manages only one organization. To manage multiple organizations as they do for their SaaS, they have built other tools to manage multiple instances.&lt;/p>
@@ -90,7 +90,7 @@
 +----------|----------|----------+
 | App | App | App |
 +--------------------------------+
-&lt;/code>&lt;/pre>&lt;p>Build at an application level or at an infrastructure level requires different skills and has an impact on the team resource. This choice will have an effect down the line and need to be aligned with the business objectives.
+&lt;/code>&lt;/pre>&lt;p>Build at an application level or at an infrastructure level requires different skills and has an impact on the team resource. This choice will have an &lt;strong>effect down the line and need to be aligned&lt;/strong> with the business objectives.
 &lt;br>
 &lt;br>
 &lt;br>

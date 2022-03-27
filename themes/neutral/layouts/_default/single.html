@@ -1,7 +1,11 @@
 {{ define "main" }}
 <article>
     <header>
+        {{ if eq .Type "day_to_day"}}
+        <h2>Day-to-day - {{ .Title }}</h2>
+        {{ else }}
         <h2>{{ .Title }}</h2>
+        {{ end}}
         {{ if eq .Type "article" }}
         <div class='meta-date'>
             <time datetime="{{.Date.Format "2006-01-02T15:04:05Z0700" }}">{{ .Date.Format "2 January 2006" }}</time>

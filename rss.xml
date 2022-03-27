@@ -1,4 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Yanaël Barbier</title><link>https://yanael.io/</link><description>Recent content on Yanaël Barbier</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 01 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yanael.io/rss.xml" rel="self" type="application/rss+xml"/><item><title>Application vs infrastructure level</title><link>https://yanael.io/articles/application-vs-infrastructure-level/</link><pubDate>Tue, 01 Mar 2022 00:00:00 +0000</pubDate><guid>https://yanael.io/articles/application-vs-infrastructure-level/</guid><description>&lt;p>&lt;em>TL;DR: Choosing at which level between application or infrastructure you will act is an early and fundamental decision for your product, it needs to be carefully decided because it will impact the business broadly.&lt;/em>&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Yanaël Barbier</title><link>https://yanael.io/</link><description>Recent content on Yanaël Barbier</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 01 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yanael.io/rss.xml" rel="self" type="application/rss+xml"/><item><title>Networks</title><link>https://yanael.io/networks/</link><pubDate>Sun, 27 Mar 2022 00:00:00 +0000</pubDate><guid>https://yanael.io/networks/</guid><description>&lt;p>Send me some packets here:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://twitter.com/YanaelBarbier">Twitter&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/st3w4r">GitHub&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.linkedin.com/in/yanaelbarbier/?locale=en_US">LinkedIn&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Application vs infrastructure level</title><link>https://yanael.io/articles/application-vs-infrastructure-level/</link><pubDate>Tue, 01 Mar 2022 00:00:00 +0000</pubDate><guid>https://yanael.io/articles/application-vs-infrastructure-level/</guid><description>&lt;p>&lt;em>TL;DR: Choosing at which level between application or infrastructure you will act is an early and fundamental decision for your product, it needs to be carefully decided because it will impact the business broadly.&lt;/em>&lt;/p>
 &lt;h2 id="saas">SaaS&lt;/h2>
 &lt;p>Software as a Service is the approach that lets you &lt;strong>build the way you want&lt;/strong> without worrying about the support of multi-platforms.&lt;/p>
 &lt;p>Technical compatibility appears in the integration part but not on the design decisions made inside the product. You can choose your language, stack, structure, practices, to make your service run.&lt;/p>
@@ -109,11 +114,6 @@ export PATH=&lt;/p>
 &lt;li>Grenoble, France, 2 years 2012-2014&lt;/li>
 &lt;li>Tournon-sur-Rhône, Ardèche, France, 3 years 2009 - 2012&lt;/li>
 &lt;li>Home sweet home, Ardèche, France 16 years 1993 - 2009&lt;/li>
-&lt;/ul></description></item><item><title>Networks</title><link>https://yanael.io/networks/</link><pubDate>Sun, 20 Jun 2021 00:00:00 +0000</pubDate><guid>https://yanael.io/networks/</guid><description>&lt;p>&lt;a href="https://en.wikipedia.org/wiki/The_Social_Network">The Social Network&lt;/a> one of my most inspiring movie but you&amp;rsquo;ll not find the Zuck&amp;rsquo;s website in this list:&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="https://twitter.com/YanaelBarbier">Twitter&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://github.com/st3w4r">GitHub&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://www.linkedin.com/in/yanaelbarbier/?locale=en_US">LinkedIn&lt;/a>&lt;/li>
 &lt;/ul></description></item><item><title>Subscribe</title><link>https://yanael.io/subscribe/</link><pubDate>Sun, 14 Feb 2021 00:00:00 +0000</pubDate><guid>https://yanael.io/subscribe/</guid><description>&lt;p>To receive my fresh articles and day-to-day posts:&lt;/p>
 &lt;p>RSS: &lt;a href="https://yanael.io/rss.xml
 ">https://yanael.io/rss.xml

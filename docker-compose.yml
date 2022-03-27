@@ -3,7 +3,9 @@ version: '3'
 services:
 
   build:
-    image: hugo
+    build:
+      context: .
+      dockerfile: Dockerfile
     command: hugo
     working_dir: "/app"
     volumes:
@@ -11,7 +13,9 @@ services:
       - "./public:/app/public"
 
   server:
-    image: hugo
+    build:
+      context: .
+      dockerfile: Dockerfile
     command: hugo server --bind="0.0.0.0" ${OPTIONS} # --buildDrafts
     working_dir: "/app"
     volumes:

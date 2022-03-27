@@ -1,13 +1,13 @@
 ---
 title: "Networks"
-date: 2021-06-20T00:00:00Z
+date: 2022-03-27T00:00:00Z
 draft: false
 menu:
     main:
         weight: -60
 ---
 
-[The Social Network](https://en.wikipedia.org/wiki/The_Social_Network) one of my most inspiring movie but you'll not find the Zuck's website in this list:
+Send me some packets here:
 
 - [Twitter](https://twitter.com/YanaelBarbier)
 - [GitHub](https://github.com/st3w4r)

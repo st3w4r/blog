@@ -7,6 +7,6 @@ title: "Day-to-day"
 draft: true
 ---
 
-When I start working on new things I used to write down what I have in mind, all my questions, thoughts and understanding. This end up with a long jounery with all the things I have learned.
+When I start working on new things I write down what I have in mind, my questions, thoughts, and understanding. This ends up with a long log with all the things I have learned during the journey.
 
-There is my logs:
+There are my logs:

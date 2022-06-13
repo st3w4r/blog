@@ -1,13 +1,13 @@
 ---
 title: "Learning Machine Learning"
 date: 2021-02-14T00:00:00Z
-draft: true
+draft: false
 type: "day_to_day"
 number_of_days: 3
 updated_on: false
 ---
 
-Machine Learning and Deep Learning are now everywhere, as a Software Engineer it is seen as a Data Scientist subject but it sounded so cool so I wanted to dig it. Here are my day-to-day notes on this long journey to master the field.
+Machine Learning and Deep Learning are trendy topics and on every company's roadmap. As a Software Engineer, it's identified as a Data Scientist subject but it sounded so cool that I decided to dig it. Here are my day-to-day notes on this long journey to master the field.
 
 ---
 
@@ -21,15 +21,15 @@ Machine Learning and Deep Learning are now everywhere, as a Software Engineer it
 ## [2020-03-17]({{< ref "/days/ml#2020-03-17" >}}) {#2020-03-17}
 
 
-Hello world for CNNs, make a simple network that predict the MNIST digits
+Hello world for CNNs, make a simple network that predicts the MNIST digits
 
-[https://keras.io/examples/mnist_cnn/](https://keras.io/examples/mnist_cnn/)
+[https://keras.io/examples/mnist_cnn/](https://keras.io/examples/vision/mnist_convnet/)
 
-- [ ]  check out how the model is build after you compile it with: model.summary()
-- [ ]  try changing a few parameters in the model and check out how it looks now
-- [ ]  when you train the model, change some of the factors like: batch_size, epochs and learning rate
-- [ ]  print out how the data looks for the different pre-processing steps
-- [x]  Start lessons 1 fast.ai
+- check out how the model is built after you compile it with: model.summary()
+- try changing a few parameters in the model and check out how it looks now
+- when you train the model, change some of the factors like: batch_size, epochs and learning rate
+- print out how the data looks for the different pre-processing steps
+- Start lesson 1 [fast.ai](http://fast.ai)
 
 
 
@@ -42,7 +42,7 @@ Tasks:
 
 I have seen how to download a dataset, how to create a DataLoaders and how to train a pre-trained model.
 
-In the learner I see different types of layers: Conv2d, BatchNorm2d, ReLU, MaxPool2d, etc.
+In the learner, I see different types of layers: Conv2d, BatchNorm2d, ReLU, MaxPool2d, etc.
 
 Questions:
 
@@ -55,7 +55,7 @@ Questions:
 ## [2020-03-19]({{< ref "/days/ml#2020-03-19" >}}) {#2020-03-19}
 
 Try to tweak a model.  
-Read the documentation, discovering the simple model createion.  
+Read the documentation, and discover the simple model creation.  
 The list of definitions: [https://deepai.org/definitions](https://deepai.org/definitions)
 
 Questions:
@@ -66,10 +66,10 @@ Questions:
     Modify the amount of movement over the image.
     If stride set to 1 the filter will move one pixel or unit at a time.  
     [https://deepai.org/machine-learning-glossary-and-terms/stride](https://deepai.org/machine-learning-glossary-and-terms/stride)
-- What's epochs is? Cycles through all the data
+- What is an epoch? Cycles through all the data
 - What's a callback?
-- What's a one cycle?
-    - [What is 1cycle?](https://docs.fast.ai/callbacks.one_cycle.html#The-1cycle-policy)
+- What's one cycle?
+    - [What is 1cycle?](https://fastai1.fast.ai/callbacks.one_cycle.html#The-1cycle-policy)
     - [A disciplined approach to neural network hyper-parameters: Part 1 -- learning rate, batch size, momentum, and weight decay](https://arxiv.org/pdf/1803.09820.pdf)
 - What's the learning rate per iterations
 

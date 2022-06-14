@@ -3,7 +3,7 @@ title: "Learning Machine Learning"
 date: 2022-06-14T00:00:00Z
 draft: false
 type: "day_to_day"
-number_of_days: 3
+number_of_days: 1
 updated_on: false
 ---
 
@@ -12,8 +12,6 @@ Machine Learning and Deep Learning are trendy topics and on every company's road
 ---
 
 [2020-03-17]({{< ref "/days/ml#2020-03-17" >}})  
-[2020-03-18]({{< ref "/days/ml#2020-03-18" >}})  
-[2020-03-19]({{< ref "/days/ml#2020-03-19" >}})  
 
 ---
 

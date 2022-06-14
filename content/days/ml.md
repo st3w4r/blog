@@ -7,7 +7,7 @@ number_of_days: 1
 updated_on: false
 ---
 
-Machine Learning and Deep Learning are trendy topics and on every company's roadmap. As a Software Engineer, it's identified as a Data Scientist subject but it sounded so cool that I decided to dig it. Here are my day-to-day notes on this long journey to master the field.
+Machine Learning and Deep Learning are trendy topics and it is a promising area. As a Software Engineer, it's identified as a Data Scientist subject but it sounded so cool that I decided to dig it. Here are my day-to-day notes on this long journey to master the field.
 
 ---
 

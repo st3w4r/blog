@@ -1,6 +1,6 @@
 ---
 title: "Learning Machine Learning"
-date: 2022-06-12T00:00:00Z
+date: 2022-06-14T00:00:00Z
 draft: false
 type: "day_to_day"
 number_of_days: 3

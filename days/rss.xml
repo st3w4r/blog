@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Day-to-day on Yanaël Barbier</title><link>https://yanael.io/days/</link><description>Recent content in Day-to-day on Yanaël Barbier</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 10 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://yanael.io/days/rss.xml" rel="self" type="application/rss+xml"/><item><title>Learning Machine Learning</title><link>https://yanael.io/days/ml/</link><pubDate>Tue, 14 Jun 2022 00:00:00 +0000</pubDate><guid>https://yanael.io/days/ml/</guid><description>&lt;p>Machine Learning and Deep Learning are trendy topics and it is a promising area. As a Software Engineer, it&amp;rsquo;s identified as a Data Scientist subject but it sounded so cool that I decided to dig it. Here are my day-to-day notes on this long journey to master the field.&lt;/p>
 &lt;hr>
-&lt;p>&lt;a href="https://yanael.io/days/ml/#2020-03-17">2020-03-17&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://yanael.io/days/ml/#2020-03-17">2020-03-17&lt;/a>&lt;br>
+&lt;a href="https://yanael.io/days/ml/#2020-03-18">2020-03-18&lt;/a>&lt;/p>
 &lt;hr>
 &lt;h2 id="2020-03-17">&lt;a href="https://yanael.io/days/ml/#2020-03-17">2020-03-17&lt;/a>&lt;/h2>
 &lt;p>Hello world for CNNs, make a simple network that predicts the MNIST digits&lt;/p>
@@ -11,6 +12,21 @@
 &lt;li>when you train the model, change some of the factors like: batch_size, epochs and learning rate&lt;/li>
 &lt;li>print out how the data looks for the different pre-processing steps&lt;/li>
 &lt;li>Start lesson 1 &lt;a href="http://fast.ai">fast.ai&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="2020-03-18">&lt;a href="https://yanael.io/days/ml/#2020-03-18">2020-03-18&lt;/a>&lt;/h2>
+&lt;p>Tasks:&lt;/p>
+&lt;ul>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> Continue &lt;a href="https://course19.fast.ai/videos/?lesson=1">lesson 1 fast.ai&lt;/a>&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Train model on MNIST dataset&lt;/li>
+&lt;/ul>
+&lt;p>I have seen how to download a dataset, how to create a DataLoaders and how to train a pre-trained model.&lt;/p>
+&lt;p>In the learner, I see different types of layers: Conv2d, BatchNorm2d, ReLU, MaxPool2d, etc.&lt;/p>
+&lt;p>Questions:&lt;/p>
+&lt;ul>
+&lt;li>What does freeze and unfreeze&lt;/li>
+&lt;li>What&amp;rsquo;s a kernel&lt;/li>
+&lt;li>What&amp;rsquo;s a sequential model&lt;/li>
+&lt;li>What each layer does&lt;/li>
 &lt;/ul>
 &lt;h2 id="next">NeXT&lt;/h2>
 &lt;p>To follow the upcoming days:&lt;/p>

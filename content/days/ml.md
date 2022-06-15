@@ -12,6 +12,7 @@ Machine Learning and Deep Learning are trendy topics and it is a promising area.
 ---
 
 [2020-03-17]({{< ref "/days/ml#2020-03-17" >}})  
+[2020-03-18]({{< ref "/days/ml#2020-03-18" >}})  
 
 ---
 
@@ -28,6 +29,25 @@ Hello world for CNNs, make a simple network that predicts the MNIST digits
 - when you train the model, change some of the factors like: batch_size, epochs and learning rate
 - print out how the data looks for the different pre-processing steps
 - Start lesson 1 [fast.ai](http://fast.ai)
+
+
+## [2020-03-18]({{< ref "/days/ml#2020-03-18" >}}) {#2020-03-18}
+
+Tasks: 
+
+- [x]  Continue [lesson 1 fast.ai](https://course19.fast.ai/videos/?lesson=1)
+- [ ]  Train model on MNIST dataset
+
+I have seen how to download a dataset, how to create a DataLoaders and how to train a pre-trained model.
+
+In the learner, I see different types of layers: Conv2d, BatchNorm2d, ReLU, MaxPool2d, etc.
+
+Questions:
+
+- What does freeze and unfreeze
+- What's a kernel
+- What's a sequential model
+- What each layer does
 
 
 ## NeXT

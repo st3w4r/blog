@@ -24,10 +24,10 @@
 &lt;p>In the learner, I see different types of layers: Conv2d, BatchNorm2d, ReLU, MaxPool2d, etc.&lt;/p>
 &lt;p>Questions:&lt;/p>
 &lt;ul>
-&lt;li>What does freeze and unfreeze&lt;/li>
-&lt;li>What&amp;rsquo;s a kernel&lt;/li>
-&lt;li>What&amp;rsquo;s a sequential model&lt;/li>
-&lt;li>What each layer does&lt;/li>
+&lt;li>What does freeze and unfreeze?&lt;/li>
+&lt;li>What&amp;rsquo;s a kernel?&lt;/li>
+&lt;li>What&amp;rsquo;s a sequential model?&lt;/li>
+&lt;li>What does each layer do?&lt;/li>
 &lt;/ul>
 &lt;h2 id="2020-03-19">&lt;a href="https://yanael.io/days/ml/#2020-03-19">2020-03-19&lt;/a>&lt;/h2>
 &lt;p>Try to tweak a model.&lt;br>

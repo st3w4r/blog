@@ -45,10 +45,10 @@ In the learner, I see different types of layers: Conv2d, BatchNorm2d, ReLU, MaxP
 
 Questions:
 
-- What does freeze and unfreeze
-- What's a kernel
-- What's a sequential model
-- What each layer does
+- What does freeze and unfreeze?
+- What's a kernel?
+- What's a sequential model?
+- What does each layer do?
 
 
 ## [2020-03-19]({{< ref "/days/ml#2020-03-19" >}}) {#2020-03-19}

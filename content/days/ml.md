@@ -3,7 +3,7 @@ title: "Learning Machine Learning"
 date: 2022-06-15T00:00:00Z
 draft: false
 type: "day_to_day"
-number_of_days: 2
+number_of_days: 3
 updated_on: false
 ---
 
@@ -13,6 +13,7 @@ Machine Learning and Deep Learning are trendy topics and it is a promising area.
 
 [2020-03-17]({{< ref "/days/ml#2020-03-17" >}})  
 [2020-03-18]({{< ref "/days/ml#2020-03-18" >}})  
+[2020-03-19]({{< ref "/days/ml#2020-03-19" >}})  
 
 ---
 
@@ -48,6 +49,28 @@ Questions:
 - What's a kernel
 - What's a sequential model
 - What each layer does
+
+
+## [2020-03-19]({{< ref "/days/ml#2020-03-19" >}}) {#2020-03-19}
+
+Try to tweak a model.  
+Read the documentation, and discover the simple model creation.  
+The list of definitions: [https://deepai.org/definitions](https://deepai.org/definitions)
+
+Questions:
+
+- What's a kernel?  
+    Use to map a non-linear problem to a linear methods
+- What's the stride?  
+    Modify the amount of movement over the image.
+    If stride set to 1 the filter will move one pixel or unit at a time.  
+    [https://deepai.org/machine-learning-glossary-and-terms/stride](https://deepai.org/machine-learning-glossary-and-terms/stride)
+- What is an epoch? Cycles through all the data
+- What's a callback?
+- What's one cycle?
+    - [What is 1cycle?](https://fastai1.fast.ai/callbacks.one_cycle.html#The-1cycle-policy)
+    - [A disciplined approach to neural network hyper-parameters: Part 1 -- learning rate, batch size, momentum, and weight decay](https://arxiv.org/pdf/1803.09820.pdf)
+- What's the learning rate per iterations
 
 
 ## NeXT

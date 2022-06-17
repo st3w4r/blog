@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Day-to-day on Yanaël Barbier</title><link>https://yanael.io/days/</link><description>Recent content in Day-to-day on Yanaël Barbier</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 10 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://yanael.io/days/rss.xml" rel="self" type="application/rss+xml"/><item><title>Learning Machine Learning</title><link>https://yanael.io/days/ml/</link><pubDate>Wed, 15 Jun 2022 00:00:00 +0000</pubDate><guid>https://yanael.io/days/ml/</guid><description>&lt;p>Machine Learning and Deep Learning are trendy topics and it is a promising area. As a Software Engineer, it&amp;rsquo;s identified as a Data Scientist subject but it sounded so cool that I decided to dig it. Here are my day-to-day notes on this long journey to master the field.&lt;/p>
 &lt;hr>
 &lt;p>&lt;a href="https://yanael.io/days/ml/#2020-03-17">2020-03-17&lt;/a>&lt;br>
-&lt;a href="https://yanael.io/days/ml/#2020-03-18">2020-03-18&lt;/a>&lt;/p>
+&lt;a href="https://yanael.io/days/ml/#2020-03-18">2020-03-18&lt;/a>&lt;br>
+&lt;a href="https://yanael.io/days/ml/#2020-03-19">2020-03-19&lt;/a>&lt;/p>
 &lt;hr>
 &lt;h2 id="2020-03-17">&lt;a href="https://yanael.io/days/ml/#2020-03-17">2020-03-17&lt;/a>&lt;/h2>
 &lt;p>Hello world for CNNs, make a simple network that predicts the MNIST digits&lt;/p>
@@ -27,6 +28,28 @@
 &lt;li>What&amp;rsquo;s a kernel&lt;/li>
 &lt;li>What&amp;rsquo;s a sequential model&lt;/li>
 &lt;li>What each layer does&lt;/li>
+&lt;/ul>
+&lt;h2 id="2020-03-19">&lt;a href="https://yanael.io/days/ml/#2020-03-19">2020-03-19&lt;/a>&lt;/h2>
+&lt;p>Try to tweak a model.&lt;br>
+Read the documentation, and discover the simple model creation.&lt;br>
+The list of definitions: &lt;a href="https://deepai.org/definitions">https://deepai.org/definitions&lt;/a>&lt;/p>
+&lt;p>Questions:&lt;/p>
+&lt;ul>
+&lt;li>What&amp;rsquo;s a kernel?&lt;br>
+Use to map a non-linear problem to a linear methods&lt;/li>
+&lt;li>What&amp;rsquo;s the stride?&lt;br>
+Modify the amount of movement over the image.
+If stride set to 1 the filter will move one pixel or unit at a time.&lt;br>
+&lt;a href="https://deepai.org/machine-learning-glossary-and-terms/stride">https://deepai.org/machine-learning-glossary-and-terms/stride&lt;/a>&lt;/li>
+&lt;li>What is an epoch? Cycles through all the data&lt;/li>
+&lt;li>What&amp;rsquo;s a callback?&lt;/li>
+&lt;li>What&amp;rsquo;s one cycle?
+&lt;ul>
+&lt;li>&lt;a href="https://fastai1.fast.ai/callbacks.one_cycle.html#The-1cycle-policy">What is 1cycle?&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://arxiv.org/pdf/1803.09820.pdf">A disciplined approach to neural network hyper-parameters: Part 1 &amp;ndash; learning rate, batch size, momentum, and weight decay&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>What&amp;rsquo;s the learning rate per iterations&lt;/li>
 &lt;/ul>
 &lt;h2 id="next">NeXT&lt;/h2>
 &lt;p>To follow the upcoming days:&lt;/p>

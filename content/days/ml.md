@@ -66,7 +66,8 @@ Questions:
     If stride set to 1 the filter will move one pixel or unit at a time.  
     [https://deepai.org/machine-learning-glossary-and-terms/stride](https://deepai.org/machine-learning-glossary-and-terms/stride)
 - What is an epoch? Cycles through all the data
-- What's a callback?
+- What are callbacks in the training loop for?
+    - Used to tweak the training loop at different stages: after epoch, after loss, before validate, etc
 - What's one cycle?
     - [What is 1cycle?](https://fastai1.fast.ai/callbacks.one_cycle.html#The-1cycle-policy)
     - [A disciplined approach to neural network hyper-parameters: Part 1 -- learning rate, batch size, momentum, and weight decay](https://arxiv.org/pdf/1803.09820.pdf)

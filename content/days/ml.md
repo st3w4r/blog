@@ -1,9 +1,9 @@
 ---
 title: "Learning Machine Learning"
-date: 2022-06-15T00:00:00Z
+date: 2022-06-19T00:00:00Z
 draft: false
 type: "day_to_day"
-number_of_days: 3
+number_of_days: 4
 updated_on: false
 ---
 
@@ -14,6 +14,7 @@ Machine Learning and Deep Learning are trendy topics and it is a promising area.
 [2020-03-17]({{< ref "/days/ml#2020-03-17" >}})  
 [2020-03-18]({{< ref "/days/ml#2020-03-18" >}})  
 [2020-03-19]({{< ref "/days/ml#2020-03-19" >}})  
+[2020-03-21]({{< ref "/days/ml#2020-03-21" >}})  
 
 ---
 
@@ -72,6 +73,28 @@ Questions:
     - [What is 1cycle?](https://fastai1.fast.ai/callbacks.one_cycle.html#The-1cycle-policy)
     - [A disciplined approach to neural network hyper-parameters: Part 1 -- learning rate, batch size, momentum, and weight decay](https://arxiv.org/pdf/1803.09820.pdf)
 - What's the learning rate per iterations
+
+
+## [2020-03-21]({{< ref "/days/ml#2020-03-21" >}}) {#2020-03-21}
+
+Read more documentation about the [callbacks](https://docs.fast.ai/callback.core.html), the callback makes it easy to add new functionalities to the training loop.
+
+Read about the learning rate.
+
+[Setting the learning rate of your neural network](https://www.jeremyjordan.me/nn-learning-rate/)
+
+- A small learning rate will require many updates before reaching the minimum point
+- Optimal learning rate swiftly reaches the minimum point
+- Too large learning rate will cause drastic updates which lead to divergent behaviors
+
+Test all three phases to discover the optimal learning rate range.
+
+[Visualizing the Loss Landscape of Neural Nets](https://arxiv.org/abs/1712.09913) (Paper)
+
+[Cyclical Learning Rates for Training Neural Networks](https://arxiv.org/abs/1506.01186) (Paper)
+
+Questions:
+- What's a hyper-parameter?
 
 
 ## NeXT

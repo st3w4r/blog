@@ -1,9 +1,9 @@
 ---
 title: "Learning Machine Learning"
-date: 2022-06-19T00:00:00Z
+date: 2022-06-22T00:00:00Z
 draft: false
 type: "day_to_day"
-number_of_days: 4
+number_of_days: 5
 updated_on: false
 ---
 
@@ -14,6 +14,7 @@ Machine Learning and Deep Learning are trendy topics and it is a promising area.
 [2020-03-17]({{< ref "/days/ml#2020-03-17" >}})  
 [2020-03-18]({{< ref "/days/ml#2020-03-18" >}})  
 [2020-03-19]({{< ref "/days/ml#2020-03-19" >}})  
+[2020-03-20]({{< ref "/days/ml#2020-03-20" >}})  
 [2020-03-21]({{< ref "/days/ml#2020-03-21" >}})  
 
 ---
@@ -75,7 +76,7 @@ Questions:
 - What's the learning rate per iterations
 
 
-## [2020-03-21]({{< ref "/days/ml#2020-03-21" >}}) {#2020-03-21}
+## [2020-03-20]({{< ref "/days/ml#2020-03-20" >}}) {#2020-03-20}
 
 Read more documentation about the [callbacks](https://docs.fast.ai/callback.core.html), the callback makes it easy to add new functionalities to the training loop.
 
@@ -95,6 +96,26 @@ Test all three phases to discover the optimal learning rate range.
 
 Questions:
 - What's a hyper-parameter?
+
+
+## [2020-03-21]({{< ref "/days/ml#2020-03-21" >}}) {#2020-03-21}
+
+I have watched videos of [Three Blue One Brown](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi) about Neural Networks.
+
+A great method to train a model is the one-cycle method.
+
+[A disciplined approach to neural network hyper-parameters](https://arxiv.org/abs/1803.09820) ([Paper](https://arxiv.org/pdf/1803.09820.pdf))
+
+
+ReLU (Rectified Linear Unit) is an activation function.
+
+Question:
+- How does ReLU work behind the scene?
+    [Rectifier (neural networks)](https://en.wikipedia.org/wiki/Rectifier_(neural_networks))
+
+
+Tasks:
+- [x]  Train a model with a custom dataset
 
 
 ## NeXT

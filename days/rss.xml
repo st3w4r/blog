@@ -1,10 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Day-to-day on Yanaël Barbier</title><link>https://yanael.io/days/</link><description>Recent content in Day-to-day on Yanaël Barbier</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 10 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://yanael.io/days/rss.xml" rel="self" type="application/rss+xml"/><item><title>Learning Machine Learning</title><link>https://yanael.io/days/ml/</link><pubDate>Wed, 22 Jun 2022 00:00:00 +0000</pubDate><guid>https://yanael.io/days/ml/</guid><description>&lt;p>Machine Learning and Deep Learning are trendy topics and it is a promising area. As a Software Engineer, it&amp;rsquo;s identified as a Data Scientist subject but it sounded so cool that I decided to dig it. Here are my day-to-day notes on this long journey to master the field.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Day-to-day on Yanaël Barbier</title><link>https://yanael.io/days/</link><description>Recent content in Day-to-day on Yanaël Barbier</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 10 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://yanael.io/days/rss.xml" rel="self" type="application/rss+xml"/><item><title>Learning Machine Learning</title><link>https://yanael.io/days/ml/</link><pubDate>Sun, 26 Jun 2022 00:00:00 +0000</pubDate><guid>https://yanael.io/days/ml/</guid><description>&lt;p>Machine Learning and Deep Learning are trendy topics and it is a promising area. As a Software Engineer, it&amp;rsquo;s identified as a Data Scientist subject but it sounded so cool that I decided to dig it. Here are my day-to-day notes on this long journey to master the field.&lt;/p>
 &lt;hr>
 &lt;p>&lt;a href="https://yanael.io/days/ml/#2020-03-17">2020-03-17&lt;/a>&lt;br>
 &lt;a href="https://yanael.io/days/ml/#2020-03-18">2020-03-18&lt;/a>&lt;br>
 &lt;a href="https://yanael.io/days/ml/#2020-03-19">2020-03-19&lt;/a>&lt;br>
 &lt;a href="https://yanael.io/days/ml/#2020-03-20">2020-03-20&lt;/a>&lt;br>
-&lt;a href="https://yanael.io/days/ml/#2020-03-21">2020-03-21&lt;/a>&lt;/p>
+&lt;a href="https://yanael.io/days/ml/#2020-03-21">2020-03-21&lt;/a>&lt;br>
+&lt;a href="https://yanael.io/days/ml/#2020-03-22">2020-03-22&lt;/a>&lt;/p>
 &lt;hr>
 &lt;h2 id="2020-03-17">&lt;a href="https://yanael.io/days/ml/#2020-03-17">2020-03-17&lt;/a>&lt;/h2>
 &lt;p>Hello world for CNNs, make a simple network that predicts the MNIST digits&lt;/p>
@@ -86,6 +87,61 @@ If stride set to 1 the filter will move one pixel or unit at a time.&lt;br>
 &lt;p>Tasks:&lt;/p>
 &lt;ul>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> Train a model with a custom dataset&lt;/li>
+&lt;/ul>
+&lt;h2 id="2020-03-22">&lt;a href="https://yanael.io/days/ml/#2020-03-22">2020-03-22&lt;/a>&lt;/h2>
+&lt;p>I have trained a model with my own dataset. I have to clean up the top losses data, Fastai provides a class to do that. Load the new data and retrain the model.&lt;/p>
+&lt;p>I have to export the model, it creates a pickle file &lt;code>.pkl&lt;/code>&lt;/p>
+&lt;p>This file contains the model, the weights, metadata like the classes or the transforms&lt;/p>
+&lt;p>I have built a small program that takes this file and loads it with Fastai and returns the prediction on custom images.&lt;/p>
+&lt;p>Now I have a good idea of how to export a model and run it into production.&lt;/p>
+&lt;p>&amp;ldquo;Inference&amp;rdquo; is the name of the prediction process.&lt;/p>
+&lt;p>Learning rate too high -&amp;gt; The validation loss will be high&lt;/p>
+&lt;p>Learning rate too low the error rate will decrease very slowly between epochs. An indication is the training loss will be higher than the validation loss&lt;/p>
+&lt;p>To recognize if a model is starting over fitting is only if the error rate starts to be worth than the previous epochs. Not about training loss lower than validation loss.&lt;/p>
+&lt;p>Tensor with 3 dimensions for a colored image.&lt;/p>
+&lt;p>Visualize &lt;a href="http://matrixmultiplication.xyz">Matrix Multiplication&lt;/a>&lt;/p>
+&lt;p>Acronyms:&lt;/p>
+&lt;ul>
+&lt;li>SGD: Stochastic Gradient Descent&lt;/li>
+&lt;li>MSE: Mean Squared Error&lt;/li>
+&lt;/ul>
+&lt;p>Learning linear regression and the derivative is useful to understand how loss calculation works.&lt;/p>
+&lt;p>To calculate the gradient descent in practice, we use mini-batches instead of calculating the whole batch.&lt;/p>
+&lt;p>Vocabulary:&lt;/p>
+&lt;ul>
+&lt;li>Learning rate&lt;br>
+Multiple the gradian by.&lt;/li>
+&lt;li>Epoch&lt;br>
+One complete run all over the data point (image, &amp;hellip;)&lt;br>
+E.g. if 1K images, mini-batch is 100 it will take 10 iterations to see every image once, for 1 epoch.&lt;br>
+Too many times looking at the same image can lead to overfitting.&lt;/li>
+&lt;li>Minibatch&lt;br>
+Random data points to update the weights.&lt;/li>
+&lt;li>SGD&lt;br>
+Stochastic Gradient Decent using mini-batches&lt;/li>
+&lt;li>Model / Architecture&lt;br>
+Functions&lt;/li>
+&lt;li>Parameters&lt;br>
+Coefficient → Weights&lt;/li>
+&lt;li>Loss function&lt;br>
+How far away or close you are from the correct answer.&lt;/li>
+&lt;/ul>
+&lt;p>To sharpen your math understanding&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://www.youtube.com/watch?v=q6DGVGJ1WP4">There&amp;rsquo;s no such thing as &amp;ldquo;not a math person&amp;rdquo;&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.khanacademy.org/">Khan Academy&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;a href="https://www.fast.ai/2017/11/13/validation-sets/">How (and why) to create a good validation set&lt;/a>&lt;/p>
+&lt;p>Questions:&lt;/p>
+&lt;ul>
+&lt;li>What&amp;rsquo;s gradient?&lt;/li>
+&lt;li>What&amp;rsquo;s a tensor?&lt;/li>
+&lt;li>How to embed the model into an application?&lt;/li>
+&lt;/ul>
+&lt;p>Tasks:&lt;/p>
+&lt;ul>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> Export the model&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> Embed the model into a python script to process one image&lt;/li>
 &lt;/ul>
 &lt;h2 id="next">NeXT&lt;/h2>
 &lt;p>To follow the upcoming days:&lt;/p>

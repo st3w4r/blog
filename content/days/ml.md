@@ -1,9 +1,9 @@
 ---
 title: "Learning Machine Learning"
-date: 2022-06-22T00:00:00Z
+date: 2022-06-26T00:00:00Z
 draft: false
 type: "day_to_day"
-number_of_days: 5
+number_of_days: 6
 updated_on: false
 ---
 
@@ -16,6 +16,7 @@ Machine Learning and Deep Learning are trendy topics and it is a promising area.
 [2020-03-19]({{< ref "/days/ml#2020-03-19" >}})  
 [2020-03-20]({{< ref "/days/ml#2020-03-20" >}})  
 [2020-03-21]({{< ref "/days/ml#2020-03-21" >}})  
+[2020-03-22]({{< ref "/days/ml#2020-03-22" >}})  
 
 ---
 
@@ -116,6 +117,74 @@ Question:
 
 Tasks:
 - [x]  Train a model with a custom dataset
+
+
+## [2020-03-22]({{< ref "/days/ml#2020-03-22" >}}) {#2020-03-22}
+
+I have trained a model with my own dataset. I have to clean up the top losses data, Fastai provides a class to do that. Load the new data and retrain the model.
+
+I have to export the model, it creates a pickle file `.pkl`
+
+This file contains the model, the weights, metadata like the classes or the transforms
+
+I have built a small program that takes this file and loads it with Fastai and returns the prediction on custom images.
+
+Now I have a good idea of how to export a model and run it into production.
+
+"Inference" is the name of the prediction process.
+
+Learning rate too high -> The validation loss will be high
+
+Learning rate too low the error rate will decrease very slowly between epochs. An indication is the training loss will be higher than the validation loss
+
+To recognize if a model is starting over fitting is only if the error rate starts to be worth than the previous epochs. Not about training loss lower than validation loss.
+
+Tensor with 3 dimensions for a colored image.
+
+Visualize [Matrix Multiplication](http://matrixmultiplication.xyz)
+
+Acronyms:
+- SGD: Stochastic Gradient Descent
+- MSE: Mean Squared Error
+
+Learning linear regression and the derivative is useful to understand how loss calculation works.
+
+To calculate the gradient descent in practice, we use mini-batches instead of calculating the whole batch.
+
+Vocabulary:
+- Learning rate\
+    Multiple the gradian by.
+- Epoch\
+    One complete run all over the data point (image, ...)\
+    E.g. if 1K images, mini-batch is 100 it will take 10 iterations to see every image once, for 1 epoch.\
+    Too many times looking at the same image can lead to overfitting.
+- Minibatch\
+    Random data points to update the weights.
+- SGD\
+    Stochastic Gradient Decent using mini-batches
+- Model / Architecture\
+    Functions
+- Parameters\
+    Coefficient → Weights
+- Loss function\
+    How far away or close you are from the correct answer.
+
+
+To sharpen your math understanding
+- [There's no such thing as "not a math person"](https://www.youtube.com/watch?v=q6DGVGJ1WP4)
+- [Khan Academy](https://www.khanacademy.org/)
+
+
+[How (and why) to create a good validation set](https://www.fast.ai/2017/11/13/validation-sets/)
+
+Questions:
+- What's gradient?
+- What's a tensor?
+- How to embed the model into an application?
+
+Tasks:
+- [x]  Export the model
+- [x]  Embed the model into a python script to process one image
 
 
 ## NeXT

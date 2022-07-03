@@ -1,11 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Day-to-day on Yanaël Barbier</title><link>https://yanael.io/days/</link><description>Recent content in Day-to-day on Yanaël Barbier</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 10 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://yanael.io/days/rss.xml" rel="self" type="application/rss+xml"/><item><title>Learning Machine Learning</title><link>https://yanael.io/days/ml/</link><pubDate>Sun, 26 Jun 2022 00:00:00 +0000</pubDate><guid>https://yanael.io/days/ml/</guid><description>&lt;p>Machine Learning and Deep Learning are trendy topics and it is a promising area. As a Software Engineer, it&amp;rsquo;s identified as a Data Scientist subject but it sounded so cool that I decided to dig it. Here are my day-to-day notes on this long journey to master the field.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Day-to-day on Yanaël Barbier</title><link>https://yanael.io/days/</link><description>Recent content in Day-to-day on Yanaël Barbier</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 10 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://yanael.io/days/rss.xml" rel="self" type="application/rss+xml"/><item><title>Learning Machine Learning</title><link>https://yanael.io/days/ml/</link><pubDate>Sun, 03 Jul 2022 00:00:00 +0000</pubDate><guid>https://yanael.io/days/ml/</guid><description>&lt;p>Machine Learning and Deep Learning are trendy topics and it is a promising area. As a Software Engineer, it&amp;rsquo;s identified as a Data Scientist subject but it sounded so cool that I decided to dig it. Here are my day-to-day notes on this long journey to master the field.&lt;/p>
 &lt;hr>
 &lt;p>&lt;a href="https://yanael.io/days/ml/#2020-03-17">2020-03-17&lt;/a>&lt;br>
 &lt;a href="https://yanael.io/days/ml/#2020-03-18">2020-03-18&lt;/a>&lt;br>
 &lt;a href="https://yanael.io/days/ml/#2020-03-19">2020-03-19&lt;/a>&lt;br>
 &lt;a href="https://yanael.io/days/ml/#2020-03-20">2020-03-20&lt;/a>&lt;br>
 &lt;a href="https://yanael.io/days/ml/#2020-03-21">2020-03-21&lt;/a>&lt;br>
-&lt;a href="https://yanael.io/days/ml/#2020-03-22">2020-03-22&lt;/a>&lt;/p>
+&lt;a href="https://yanael.io/days/ml/#2020-03-22">2020-03-22&lt;/a>&lt;br>
+&lt;a href="https://yanael.io/days/ml/#2020-03-23">2020-03-23&lt;/a>&lt;/p>
 &lt;hr>
 &lt;h2 id="2020-03-17">&lt;a href="https://yanael.io/days/ml/#2020-03-17">2020-03-17&lt;/a>&lt;/h2>
 &lt;p>Hello world for CNNs, make a simple network that predicts the MNIST digits&lt;/p>
@@ -143,7 +144,24 @@ How far away or close you are from the correct answer.&lt;/li>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> Export the model&lt;/li>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> Embed the model into a python script to process one image&lt;/li>
 &lt;/ul>
-&lt;h2 id="next">NeXT&lt;/h2>
+&lt;h2 id="2020-03-23">&lt;a href="https://yanael.io/days/ml/#2020-03-23">2020-03-23&lt;/a>&lt;/h2>
+&lt;p>Today learning about computer vision and image processing.&lt;/p>
+&lt;ul>
+&lt;li>A black and white image is a bunch of numbers representing the grayscale.&lt;/li>
+&lt;li>A colored image has 3 dimensions, named channels represented as a rank 3 tensor.&lt;/li>
+&lt;li>3D tensor (red, green, blue)&lt;/li>
+&lt;li>A tensor is an array with a regular shape, where every row is the same length and every column is the same length. Mathematically, we always go with number of rows by the number of columns.&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Rank:&lt;/strong> How many dimensions are there. Colored image has a rank of 3.&lt;/p>
+&lt;p>&lt;a href="https://distill.pub/2020/grand-tour/">Visualize Neural Networks&lt;/a>&lt;/p>
+&lt;hr>
+&lt;p>&lt;a href="https://github.com/fastai/numerical-linear-algebra/blob/master/README.md">Computational Linear Algebra for Coders&lt;/a>&lt;/p>
+&lt;p>Linear Function:&lt;/p>
+&lt;pre>&lt;code>y = ax+b
+&lt;/code>&lt;/pre>&lt;pre>&lt;code>x, y are the coordinates of any point on the line
+a is the slope of the line
+b is the y-intercept (where the line crosses the y-axis)
+&lt;/code>&lt;/pre>&lt;h2 id="next">NeXT&lt;/h2>
 &lt;p>To follow the upcoming days:&lt;/p>
 &lt;p>&lt;form id="form-subscribe"
 action="https://formspree.io/f/mleopdlv"

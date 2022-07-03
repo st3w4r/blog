@@ -1,9 +1,9 @@
 ---
 title: "Learning Machine Learning"
-date: 2022-06-26T00:00:00Z
+date: 2022-07-03T00:00:00Z
 draft: false
 type: "day_to_day"
-number_of_days: 6
+number_of_days: 7
 updated_on: false
 ---
 
@@ -17,6 +17,7 @@ Machine Learning and Deep Learning are trendy topics and it is a promising area.
 [2020-03-20]({{< ref "/days/ml#2020-03-20" >}})  
 [2020-03-21]({{< ref "/days/ml#2020-03-21" >}})  
 [2020-03-22]({{< ref "/days/ml#2020-03-22" >}})  
+[2020-03-23]({{< ref "/days/ml#2020-03-23" >}})  
 
 ---
 
@@ -185,6 +186,34 @@ Questions:
 Tasks:
 - [x]  Export the model
 - [x]  Embed the model into a python script to process one image
+
+
+## [2020-03-23]({{< ref "/days/ml#2020-03-23" >}}) {#2020-03-23}
+
+Today learning about computer vision and image processing.
+- A black and white image is a bunch of numbers representing the grayscale.
+- A colored image has 3 dimensions, named channels represented as a rank 3 tensor.
+- 3D tensor (red, green, blue)
+- A tensor is an array with a regular shape, where every row is the same length and every column is the same length. Mathematically, we always go with number of rows by the number of columns.
+
+**Rank:** How many dimensions are there. Colored image has a rank of 3.
+
+[Visualize Neural Networks](https://distill.pub/2020/grand-tour/)
+
+---
+
+[Computational Linear Algebra for Coders](https://github.com/fastai/numerical-linear-algebra/blob/master/README.md)
+
+Linear Function:
+```
+y = ax+b
+```
+
+```
+x, y	are the coordinates of any point on the line
+a	is the slope of the line
+b	is the y-intercept (where the line crosses the y-axis)
+```
 
 
 ## NeXT

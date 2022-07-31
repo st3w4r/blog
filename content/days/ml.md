@@ -1,9 +1,9 @@
 ---
 title: "Learning Machine Learning"
-date: 2022-07-03T00:00:00Z
+date: 2022-07-31T00:00:00Z
 draft: false
 type: "day_to_day"
-number_of_days: 7
+number_of_days: 8
 updated_on: false
 ---
 

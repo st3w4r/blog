@@ -6,7 +6,8 @@
 &lt;a href="https://yanael.io/days/ml/#2020-03-20">2020-03-20&lt;/a>&lt;br>
 &lt;a href="https://yanael.io/days/ml/#2020-03-21">2020-03-21&lt;/a>&lt;br>
 &lt;a href="https://yanael.io/days/ml/#2020-03-22">2020-03-22&lt;/a>&lt;br>
-&lt;a href="https://yanael.io/days/ml/#2020-03-23">2020-03-23&lt;/a>&lt;/p>
+&lt;a href="https://yanael.io/days/ml/#2020-03-23">2020-03-23&lt;/a>&lt;br>
+&lt;a href="https://yanael.io/days/ml/#2020-03-24">2020-03-24&lt;/a>&lt;/p>
 &lt;hr>
 &lt;h2 id="2020-03-17">&lt;a href="https://yanael.io/days/ml/#2020-03-17">2020-03-17&lt;/a>&lt;/h2>
 &lt;p>Hello world for CNNs, make a simple network that predicts the MNIST digits&lt;/p>
@@ -161,7 +162,12 @@ How far away or close you are from the correct answer.&lt;/li>
 &lt;/code>&lt;/pre>&lt;pre>&lt;code>x, y are the coordinates of any point on the line
 a is the slope of the line
 b is the y-intercept (where the line crosses the y-axis)
-&lt;/code>&lt;/pre>&lt;h2 id="next">NeXT&lt;/h2>
+&lt;/code>&lt;/pre>&lt;h2 id="2020-03-24">&lt;a href="https://yanael.io/days/ml/#2020-03-24">2020-03-24&lt;/a>&lt;/h2>
+&lt;p>&lt;a href="https://course19.fast.ai/videos/?lesson=2">Fast.ai Lesson 2&lt;/a> at &lt;a href="https://youtu.be/ccMHJeQU4Qw?t=5241">Linear Regression Problem&lt;/a>&lt;/p>
+&lt;p>Find the parameters to minimize the error. For a regression problem, the error function a.k.a &lt;strong>loss function&lt;/strong> MSE is a common one.&lt;/p>
+&lt;p>Mean Squared Error → MSE, also RMSE → Root Mean Squared Error&lt;/p>
+&lt;p>MSE is the loss, the difference between predictions and the actual number.&lt;/p>
+&lt;h2 id="next">NeXT&lt;/h2>
 &lt;p>To follow the upcoming days:&lt;/p>
 &lt;p>&lt;form id="form-subscribe"
 action="https://formspree.io/f/mleopdlv"

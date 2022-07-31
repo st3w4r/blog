@@ -18,6 +18,7 @@ Machine Learning and Deep Learning are trendy topics and it is a promising area.
 [2020-03-21]({{< ref "/days/ml#2020-03-21" >}})  
 [2020-03-22]({{< ref "/days/ml#2020-03-22" >}})  
 [2020-03-23]({{< ref "/days/ml#2020-03-23" >}})  
+[2020-03-24]({{< ref "/days/ml#2020-03-24" >}})  
 
 ---
 
@@ -214,6 +215,18 @@ x, y	are the coordinates of any point on the line
 a	is the slope of the line
 b	is the y-intercept (where the line crosses the y-axis)
 ```
+
+
+## [2020-03-24]({{< ref "/days/ml#2020-03-24" >}}) {#2020-03-24}
+
+
+[Fast.ai Lesson 2](https://course19.fast.ai/videos/?lesson=2) at [Linear Regression Problem](https://youtu.be/ccMHJeQU4Qw?t=5241)
+
+Find the parameters to minimize the error. For a regression problem, the error function a.k.a **loss function** MSE is a common one.
+
+Mean Squared Error → MSE, also RMSE → Root Mean Squared Error
+
+MSE is the loss, the difference between predictions and the actual number.
 
 
 ## NeXT

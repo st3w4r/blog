@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Day-to-day on Yanaël Barbier</title><link>https://yanael.io/days/</link><description>Recent content in Day-to-day on Yanaël Barbier</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 10 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://yanael.io/days/rss.xml" rel="self" type="application/rss+xml"/><item><title>Learning Machine Learning</title><link>https://yanael.io/days/ml/</link><pubDate>Sun, 31 Jul 2022 00:00:00 +0000</pubDate><guid>https://yanael.io/days/ml/</guid><description>&lt;p>Machine Learning and Deep Learning are trendy topics and it is a promising area. As a Software Engineer, it&amp;rsquo;s identified as a Data Scientist subject but it sounded so cool that I decided to dig it. Here are my day-to-day notes on this long journey to master the field.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Day-to-day on Yanaël Barbier</title><link>https://yanael.io/days/</link><description>Recent content in Day-to-day on Yanaël Barbier</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 10 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://yanael.io/days/rss.xml" rel="self" type="application/rss+xml"/><item><title>Learning Machine Learning</title><link>https://yanael.io/days/ml/</link><pubDate>Tue, 02 Aug 2022 00:00:00 +0000</pubDate><guid>https://yanael.io/days/ml/</guid><description>&lt;p>Machine Learning and Deep Learning are trendy topics and it is a promising area. As a Software Engineer, it&amp;rsquo;s identified as a Data Scientist subject but it sounded so cool that I decided to dig it. Here are my day-to-day notes on this long journey to master the field.&lt;/p>
 &lt;hr>
 &lt;p>&lt;a href="https://yanael.io/days/ml/#2020-03-17">2020-03-17&lt;/a>&lt;br>
 &lt;a href="https://yanael.io/days/ml/#2020-03-18">2020-03-18&lt;/a>&lt;br>
@@ -7,7 +7,8 @@
 &lt;a href="https://yanael.io/days/ml/#2020-03-21">2020-03-21&lt;/a>&lt;br>
 &lt;a href="https://yanael.io/days/ml/#2020-03-22">2020-03-22&lt;/a>&lt;br>
 &lt;a href="https://yanael.io/days/ml/#2020-03-23">2020-03-23&lt;/a>&lt;br>
-&lt;a href="https://yanael.io/days/ml/#2020-03-24">2020-03-24&lt;/a>&lt;/p>
+&lt;a href="https://yanael.io/days/ml/#2020-03-24">2020-03-24&lt;/a>&lt;br>
+&lt;a href="https://yanael.io/days/ml/#2020-03-25">2020-03-25&lt;/a>&lt;/p>
 &lt;hr>
 &lt;h2 id="2020-03-17">&lt;a href="https://yanael.io/days/ml/#2020-03-17">2020-03-17&lt;/a>&lt;/h2>
 &lt;p>Hello world for CNNs, make a simple network that predicts the MNIST digits&lt;/p>
@@ -167,6 +168,9 @@ b is the y-intercept (where the line crosses the y-axis)
 &lt;p>Find the parameters to minimize the error. For a regression problem, the error function a.k.a &lt;strong>loss function&lt;/strong> MSE is a common one.&lt;/p>
 &lt;p>Mean Squared Error → MSE, also RMSE → Root Mean Squared Error&lt;/p>
 &lt;p>MSE is the loss, the difference between predictions and the actual number.&lt;/p>
+&lt;h2 id="2020-03-25">&lt;a href="https://yanael.io/days/ml/#2020-03-25">2020-03-25&lt;/a>&lt;/h2>
+&lt;p>Continue the calculation of the SGD.&lt;/p>
+&lt;p>Create mini batch to don&amp;rsquo;t train on the whole dataset each time before updating the weights.&lt;/p>
 &lt;h2 id="next">NeXT&lt;/h2>
 &lt;p>To follow the upcoming days:&lt;/p>
 &lt;p>&lt;form id="form-subscribe"

@@ -1,9 +1,9 @@
 ---
 title: "Learning Machine Learning"
-date: 2022-07-31T00:00:00Z
+date: 2022-08-02T00:00:00Z
 draft: false
 type: "day_to_day"
-number_of_days: 8
+number_of_days: 9
 updated_on: false
 ---
 
@@ -19,6 +19,7 @@ Machine Learning and Deep Learning are trendy topics and it is a promising area.
 [2020-03-22]({{< ref "/days/ml#2020-03-22" >}})  
 [2020-03-23]({{< ref "/days/ml#2020-03-23" >}})  
 [2020-03-24]({{< ref "/days/ml#2020-03-24" >}})  
+[2020-03-25]({{< ref "/days/ml#2020-03-25" >}})  
 
 ---
 
@@ -227,6 +228,13 @@ Find the parameters to minimize the error. For a regression problem, the error f
 Mean Squared Error → MSE, also RMSE → Root Mean Squared Error
 
 MSE is the loss, the difference between predictions and the actual number.
+
+
+## [2020-03-25]({{< ref "/days/ml#2020-03-25" >}}) {#2020-03-25}
+
+Continue the calculation of the SGD.
+
+Create mini batch to don't train on the whole dataset each time before updating the weights.
 
 
 ## NeXT

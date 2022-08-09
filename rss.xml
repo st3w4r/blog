@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Yanaël Barbier</title><link>https://yanael.io/</link><description>Recent content on Yanaël Barbier</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 02 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yanael.io/rss.xml" rel="self" type="application/rss+xml"/><item><title>Learning Machine Learning</title><link>https://yanael.io/days/ml/</link><pubDate>Tue, 02 Aug 2022 00:00:00 +0000</pubDate><guid>https://yanael.io/days/ml/</guid><description>&lt;p>Machine Learning and Deep Learning are trendy topics and it is a promising area. As a Software Engineer, it&amp;rsquo;s identified as a Data Scientist subject but it sounded so cool that I decided to dig it. Here are my day-to-day notes on this long journey to master the field.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Yanaël Barbier</title><link>https://yanael.io/</link><description>Recent content on Yanaël Barbier</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 09 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yanael.io/rss.xml" rel="self" type="application/rss+xml"/><item><title>Learning Machine Learning</title><link>https://yanael.io/days/ml/</link><pubDate>Tue, 09 Aug 2022 00:00:00 +0000</pubDate><guid>https://yanael.io/days/ml/</guid><description>&lt;p>Machine Learning and Deep Learning are trendy topics and it is a promising area. As a Software Engineer, it&amp;rsquo;s identified as a Data Scientist subject but it sounded so cool that I decided to dig it. Here are my day-to-day notes on this long journey to master the field.&lt;/p>
 &lt;hr>
 &lt;p>&lt;a href="https://yanael.io/days/ml/#2020-03-17">2020-03-17&lt;/a>&lt;br>
 &lt;a href="https://yanael.io/days/ml/#2020-03-18">2020-03-18&lt;/a>&lt;br>
@@ -8,7 +8,8 @@
 &lt;a href="https://yanael.io/days/ml/#2020-03-22">2020-03-22&lt;/a>&lt;br>
 &lt;a href="https://yanael.io/days/ml/#2020-03-23">2020-03-23&lt;/a>&lt;br>
 &lt;a href="https://yanael.io/days/ml/#2020-03-24">2020-03-24&lt;/a>&lt;br>
-&lt;a href="https://yanael.io/days/ml/#2020-03-25">2020-03-25&lt;/a>&lt;/p>
+&lt;a href="https://yanael.io/days/ml/#2020-03-25">2020-03-25&lt;/a>&lt;br>
+&lt;a href="https://yanael.io/days/ml/#2020-03-26">2020-03-26&lt;/a>&lt;/p>
 &lt;hr>
 &lt;h2 id="2020-03-17">&lt;a href="https://yanael.io/days/ml/#2020-03-17">2020-03-17&lt;/a>&lt;/h2>
 &lt;p>Hello world for CNNs, make a simple network that predicts the MNIST digits&lt;/p>
@@ -171,6 +172,20 @@ b is the y-intercept (where the line crosses the y-axis)
 &lt;h2 id="2020-03-25">&lt;a href="https://yanael.io/days/ml/#2020-03-25">2020-03-25&lt;/a>&lt;/h2>
 &lt;p>Continue the calculation of the SGD.&lt;/p>
 &lt;p>Create mini batch to don&amp;rsquo;t train on the whole dataset each time before updating the weights.&lt;/p>
+&lt;h2 id="2020-03-26">&lt;a href="https://yanael.io/days/ml/#2020-03-26">2020-03-26&lt;/a>&lt;/h2>
+&lt;p>Starting &lt;a href="https://course19.fast.ai/videos/?lesson=3">lesson 3&lt;/a> about data blocks, multi-label, classification, and segmentation.&lt;/p>
+&lt;p>&lt;code>thresh&lt;/code> is used in case we have multiple labels.&lt;/p>
+&lt;p>Python &lt;code>partial&lt;/code> is used to create a function with a specific parameter.&lt;/p>
+&lt;p>Use small images to experiment more quicker.&lt;/p>
+&lt;p>Segmentation creates a labialization pixel per pixel.&lt;/p>
+&lt;ul>
+&lt;li>Difference between online and offline ML
+&lt;ul>
+&lt;li>Offline: Static dataset&lt;/li>
+&lt;li>Online: Continuously train when the data comes in. a.k.a incremental learning&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
 &lt;h2 id="next">NeXT&lt;/h2>
 &lt;p>To follow the upcoming days:&lt;/p>
 &lt;p>&lt;form id="form-subscribe"

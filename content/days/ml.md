@@ -1,9 +1,9 @@
 ---
 title: "Learning Machine Learning"
-date: 2022-08-02T00:00:00Z
+date: 2022-08-09T00:00:00Z
 draft: false
 type: "day_to_day"
-number_of_days: 9
+number_of_days: 10
 updated_on: false
 ---
 
@@ -20,6 +20,7 @@ Machine Learning and Deep Learning are trendy topics and it is a promising area.
 [2020-03-23]({{< ref "/days/ml#2020-03-23" >}})  
 [2020-03-24]({{< ref "/days/ml#2020-03-24" >}})  
 [2020-03-25]({{< ref "/days/ml#2020-03-25" >}})  
+[2020-03-26]({{< ref "/days/ml#2020-03-26" >}})  
 
 ---
 
@@ -235,6 +236,23 @@ MSE is the loss, the difference between predictions and the actual number.
 Continue the calculation of the SGD.
 
 Create mini batch to don't train on the whole dataset each time before updating the weights.
+
+
+## [2020-03-26]({{< ref "/days/ml#2020-03-26" >}}) {#2020-03-26}
+
+Starting [lesson 3](https://course19.fast.ai/videos/?lesson=3) about data blocks, multi-label, classification, and segmentation.
+
+`thresh` is used in case we have multiple labels.
+
+Python `partial` is used to create a function with a specific parameter.
+
+Use small images to experiment more quicker.
+
+Segmentation creates a labialization pixel per pixel.
+
+- Difference between online and offline ML
+    - Offline: Static dataset
+    - Online: Continuously train when the data comes in. a.k.a incremental learning
 
 
 ## NeXT

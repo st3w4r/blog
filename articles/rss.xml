@@ -10,7 +10,7 @@
 &lt;p>The way you provide your software can have an impact on the overall architecture. If you choose to have an online service where users can connect to it and use your product directly, you can design your service as one product that can &lt;strong>support multiple users&lt;/strong>, or a product that can &lt;strong>support one user&lt;/strong> but you start multiple instances of your product to serve more clients.&lt;/p>
 &lt;p>A simple representation of the architecture:&lt;/p>
 &lt;p>&lt;em>Multi-tenancy, multi-client product:&lt;/em>&lt;/p>
-&lt;pre>&lt;code>- Product
+&lt;pre tabindex="0">&lt;code>- Product
 - Client 1
 - User 1
 - User n
@@ -20,7 +20,7 @@
 - Client n
 - ...
 &lt;/code>&lt;/pre>&lt;p>&lt;em>&lt;em>Multi-instance, single client product:&lt;/em>&lt;/em>&lt;/p>
-&lt;pre>&lt;code>- Product: Instance for client 1
+&lt;pre tabindex="0">&lt;code>- Product: Instance for client 1
 - User 1
 - User n
 - Product: Instance for client 2
@@ -32,7 +32,7 @@
 &lt;p>The first approach manages the &lt;strong>multi-tenant at an application level&lt;/strong>, the second one handles the &lt;strong>multi-tenant at an infrastructure level&lt;/strong>.&lt;/p>
 &lt;p>This has an impact at different levels of the stack:&lt;/p>
 &lt;p>&lt;em>Levels:&lt;/em>&lt;/p>
-&lt;pre>&lt;code>+-------------+
+&lt;pre tabindex="0">&lt;code>+-------------+
 | Product | &amp;lt;- Application level
 |-------------|
 | Instance | &amp;lt;- Infrastructure level
@@ -79,13 +79,13 @@
 &lt;p>GitLab has the same pattern, they have an open-source version and they have a cloud service you can directly subscribe to, and they manage the instance for you. The open-source version is only for one organization; if you want to have &lt;strong>multiple organizations you need to start new instances&lt;/strong>. So this is handled at an infrastructure level.&lt;/p>
 &lt;h2 id="so-what">So what&lt;/h2>
 &lt;p>&lt;em>Multi tenancy:&lt;/em>&lt;/p>
-&lt;pre>&lt;code>+--------------------------------+
+&lt;pre tabindex="0">&lt;code>+--------------------------------+
 | Tenant 1 | Tenant 2 | Tenant 3 |
 +--------------------------------+
 | App |
 +--------------------------------+
 &lt;/code>&lt;/pre>&lt;p>or &lt;em>Single tenant:&lt;/em>&lt;/p>
-&lt;pre>&lt;code>+--------------------------------+
+&lt;pre tabindex="0">&lt;code>+--------------------------------+
 | Tenant 1 | Tenant 2 | Tenant 3 |
 +----------|----------|----------+
 | App | App | App |

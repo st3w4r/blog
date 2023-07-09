@@ -160,8 +160,8 @@ How far away or close you are from the correct answer.&lt;/li>
 &lt;hr>
 &lt;p>&lt;a href="https://github.com/fastai/numerical-linear-algebra/blob/master/README.md">Computational Linear Algebra for Coders&lt;/a>&lt;/p>
 &lt;p>Linear Function:&lt;/p>
-&lt;pre>&lt;code>y = ax+b
-&lt;/code>&lt;/pre>&lt;pre>&lt;code>x, y are the coordinates of any point on the line
+&lt;pre tabindex="0">&lt;code>y = ax+b
+&lt;/code>&lt;/pre>&lt;pre tabindex="0">&lt;code>x, y are the coordinates of any point on the line
 a is the slope of the line
 b is the y-intercept (where the line crosses the y-axis)
 &lt;/code>&lt;/pre>&lt;h2 id="2020-03-24">&lt;a href="https://yanael.io/days/ml/#2020-03-24">2020-03-24&lt;/a>&lt;/h2>
@@ -198,8 +198,6 @@ method="POST"
 &lt;p id="form-subscribe-status">&lt;/p>
 &lt;/form>
 &lt;script>
-window.addEventListener("DOMContentLoaded",function(){var form=document.getElementById("form-subscribe");var button=document.getElementById("form-subscribe-button");var status=document.getElementById("form-subscribe-status");function success(){form.reset();button.style="display: none ";status.innerHTML="Thanks!";}
-function error(){status.innerHTML="Oops! There was a problem.";}
-form.addEventListener("submit",function(ev){ev.preventDefault();var data=new FormData(form);ajax(form.method,form.action,data,success,error);});});function ajax(method,url,data,success,error){var xhr=new XMLHttpRequest();xhr.open(method,url);xhr.setRequestHeader("Accept","application/json");xhr.onreadystatechange=function(){if(xhr.readyState!==XMLHttpRequest.DONE)return;if(xhr.status===200){success(xhr.response,xhr.responseType);}else{error(xhr.status,xhr.response,xhr.responseType);}};xhr.send(data);}
+window.addEventListener("DOMContentLoaded",function(){var e=document.getElementById("form-subscribe"),n=document.getElementById("form-subscribe-button"),t=document.getElementById("form-subscribe-status");function s(){e.reset(),n.style="display: none ",t.innerHTML="Thanks!"}function o(){t.innerHTML="Oops! There was a problem."}e.addEventListener("submit",function(t){t.preventDefault();var n=new FormData(e);ajax(e.method,e.action,n,s,o)})});function ajax(e,t,n,s,o){var i=new XMLHttpRequest;i.open(e,t),i.setRequestHeader("Accept","application/json"),i.onreadystatechange=function(){if(i.readyState!==XMLHttpRequest.DONE)return;i.status===200?s(i.response,i.responseType):o(i.status,i.response,i.responseType)},i.send(n)}
 &lt;/script>
 &lt;/p></description></item></channel></rss>

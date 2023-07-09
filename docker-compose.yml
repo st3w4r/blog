@@ -16,7 +16,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    command: hugo server --bind="0.0.0.0" ${OPTIONS} # --buildDrafts
+    command: hugo server --bind="0.0.0.0" ${OPTIONS}
     working_dir: "/app"
     volumes:
       - ".:/app"

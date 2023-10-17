@@ -1,4 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Yanaël Barbier</title><link>https://yanael.io/</link><description>Recent content on Yanaël Barbier</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 09 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yanael.io/rss.xml" rel="self" type="application/rss+xml"/><item><title>Path</title><link>https://yanael.io/path/</link><pubDate>Sun, 09 Jul 2023 00:00:00 +0000</pubDate><guid>https://yanael.io/path/</guid><description>&lt;p>It’s a small world, so I just want to share some places where I used to live.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Yanaël Barbier</title><link>https://yanael.io/</link><description>Recent content on Yanaël Barbier</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 09 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yanael.io/rss.xml" rel="self" type="application/rss+xml"/><item><title>Networks</title><link>https://yanael.io/networks/</link><pubDate>Tue, 17 Oct 2023 00:00:00 +0000</pubDate><guid>https://yanael.io/networks/</guid><description>&lt;p>Send me some packets here:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://twitter.com/YanaelBarbier">X/Twitter&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.threads.net/@yanaelbarbier">Threads&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/st3w4r">GitHub&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.linkedin.com/in/yanaelbarbier/?locale=en_US">LinkedIn&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Path</title><link>https://yanael.io/path/</link><pubDate>Sun, 09 Jul 2023 00:00:00 +0000</pubDate><guid>https://yanael.io/path/</guid><description>&lt;p>It’s a small world, so I just want to share some places where I used to live.
 export PATH=&lt;/p>
 &lt;ul>
 &lt;li>London, UK, January 2022 - Present&lt;/li>
@@ -215,12 +221,7 @@ method="POST"
 &lt;script>
 window.addEventListener("DOMContentLoaded",function(){var e=document.getElementById("form-subscribe"),n=document.getElementById("form-subscribe-button"),t=document.getElementById("form-subscribe-status");function s(){e.reset(),n.style="display: none ",t.innerHTML="Thanks!"}function o(){t.innerHTML="Oops! There was a problem."}e.addEventListener("submit",function(t){t.preventDefault();var n=new FormData(e);ajax(e.method,e.action,n,s,o)})});function ajax(e,t,n,s,o){var i=new XMLHttpRequest;i.open(e,t),i.setRequestHeader("Accept","application/json"),i.onreadystatechange=function(){if(i.readyState!==XMLHttpRequest.DONE)return;i.status===200?s(i.response,i.responseType):o(i.status,i.response,i.responseType)},i.send(n)}
 &lt;/script>
-&lt;/p></description></item><item><title>Networks</title><link>https://yanael.io/networks/</link><pubDate>Sun, 27 Mar 2022 00:00:00 +0000</pubDate><guid>https://yanael.io/networks/</guid><description>&lt;p>Send me some packets here:&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="https://twitter.com/YanaelBarbier">Twitter&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://github.com/st3w4r">GitHub&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://www.linkedin.com/in/yanaelbarbier/?locale=en_US">LinkedIn&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Application vs infrastructure level</title><link>https://yanael.io/articles/application-vs-infrastructure-level/</link><pubDate>Tue, 01 Mar 2022 00:00:00 +0000</pubDate><guid>https://yanael.io/articles/application-vs-infrastructure-level/</guid><description>&lt;p>&lt;em>TL;DR: Choosing at which level between application or infrastructure you will act is an early and fundamental decision for your product, it needs to be carefully decided because it will impact the business broadly.&lt;/em>&lt;/p>
+&lt;/p></description></item><item><title>Application vs infrastructure level</title><link>https://yanael.io/articles/application-vs-infrastructure-level/</link><pubDate>Tue, 01 Mar 2022 00:00:00 +0000</pubDate><guid>https://yanael.io/articles/application-vs-infrastructure-level/</guid><description>&lt;p>&lt;em>TL;DR: Choosing at which level between application or infrastructure you will act is an early and fundamental decision for your product, it needs to be carefully decided because it will impact the business broadly.&lt;/em>&lt;/p>
 &lt;h2 id="saas">SaaS&lt;/h2>
 &lt;p>Software as a Service is the approach that lets you &lt;strong>build the way you want&lt;/strong> without worrying about the support of multi-platforms.&lt;/p>
 &lt;p>Technical compatibility appears in the integration part but not on the design decisions made inside the product. You can choose your language, stack, structure, practices, to make your service run.&lt;/p>

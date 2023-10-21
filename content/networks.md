@@ -1,6 +1,6 @@
 ---
 title: "Networks"
-date: 2022-03-27T00:00:00Z
+date: 2023-10-17T00:00:00Z
 draft: false
 menu:
     main:
@@ -8,7 +8,7 @@ menu:
 ---
 
 Send me some packets here:
-
-- [Twitter](https://twitter.com/YanaelBarbier)
+- [X/Twitter](https://twitter.com/YanaelBarbier)
+- [Threads](https://www.threads.net/@yanaelbarbier)
 - [GitHub](https://github.com/st3w4r)
 - [LinkedIn](https://www.linkedin.com/in/yanaelbarbier/?locale=en_US)

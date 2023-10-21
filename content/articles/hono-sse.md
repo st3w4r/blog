@@ -5,7 +5,7 @@ draft: false
 type: "article"
 ---
 
-[Hono](https://hono.dev/), a next-generation web framework, can be combined with Server-Sent Events (SSE) to create a real-time web applications with a focus on sending server updates to the client.
+[Hono](https://hono.dev/) is a web framework designed to run on any JavaScript runtime, making it suitable for [edge deployments](https://www.cloudflare.com/learning/serverless/glossary/what-is-edge-computing/). It can be combined with [Server-Sent Events (SSE)](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events) to create real-time web applications with a focus on sending server updates to the client.
 
 ```
   +--------+     +--------+
@@ -25,12 +25,6 @@ type: "article"
       |<--------------+
      ...             ...
 ```
-
-## Introduction to Hono and SSE
-
-[Hono](https://hono.dev/) is a cutting-edge web framework designed for the modern web and can run on any JavaScript runtime. When combined with [SSE (Server-Sent Events)](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events), a protocol optimized for sending real-time updates from server to client, you can build web applications that are dynamic and responsive.
-
-Imagine creating a live dashboard that updates its metrics without user interaction or a news feed that instantly displays new articles. This powerful combination makes it possible!
 
 ## Setting up SSE with Hono
 

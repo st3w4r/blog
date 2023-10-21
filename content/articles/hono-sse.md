@@ -1,7 +1,7 @@
 ---
 title: "Hono with Server Sent Events"
 date: 2023-10-21
-draft: true
+draft: false
 type: "article"
 ---
 

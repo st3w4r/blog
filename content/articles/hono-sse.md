@@ -1,13 +1,11 @@
 ---
-title: "Hono with SSE"
+title: "Hono with Server Sent Events"
 date: 2023-10-21
 draft: true
 type: "article"
 ---
 
-# Using Hono Framework with SSE, Server-Sent Events
-
-Hono, a next-generation web framework, can be combined with Server-Sent Events (SSE) to create a real-time web applications with a focus on sending server updates to the client.
+[Hono](https://hono.dev/), a next-generation web framework, can be combined with Server-Sent Events (SSE) to create a real-time web applications with a focus on sending server updates to the client.
 
 ```
   +--------+     +--------+
@@ -185,3 +183,9 @@ Combining Hono with SSE opens doors to real-time, dynamic web applications.
 Consider exploring advanced Hono features and more about SSE:
 - [Hono](https://hono.dev/) 
 - [SSE (Server-Sent Events)](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events)
+
+---
+Receive my stream of work on:
+- [X/Twitter](https://twitter.com/YanaelBarbier)
+- [Threads](https://www.threads.net/@yanaelbarbier)
+- [GitHub](https://github.com/st3w4r)

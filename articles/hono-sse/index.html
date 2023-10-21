@@ -1,0 +1,113 @@
+<!doctype html><html><meta name=viewport content="width=device-width,initial-scale=1"><style>html{overflow-y:scroll}body{margin-top:0;margin-bottom:0;margin-left:auto;margin-right:auto;max-width:580px;font-size:17px;line-height:32px;padding:5em 2em 2em;font-family:iowan old style,iowan,charter,palatino linotype,palatino,book antiqua,palatino lt std,Times New Roman,serif}body{color:rgb(0,0,0,.8);background-color:#fff}.meta-day-to-day{color:rgba(0,0,0,.5)}.meta-date{color:rgba(0,0,0,.5)}.subtitle{color:rgba(0,0,0,.5)}a{color:inherit;text-decoration:none;outline:none}a:active{outline:none}a:hover{text-decoration:underline;outline:none}article a{text-decoration:underline}article a:hover{color:rgba(0,0,0,.5);text-decoration:underline}nav a{text-decoration:underline}nav a:hover{color:rgba(0,0,0,.5)}.meta-day-to-day{font-size:15px;font-style:italic}.meta-date{font-size:15px;font-style:italic}.previous-title{margin-bottom:0}.previous-title a{text-decoration:none}.read-more{font-weight:700;font-style:italic}nav span{margin-right:20px}.title{margin-bottom:0}.subtitle{display:block;margin-top:0;margin-bottom:20px;font-style:italic}@media screen and (prefers-color-scheme:dark){body{color:rgba(255,255,255,.7);background-color:#0e2439}.meta-day-to-day{color:rgba(255,255,255,.5)}.meta-date{color:rgba(255,255,255,.5)}.subtitle{color:rgba(255,255,255,.5)}article a:hover{color:rgba(255,255,255,.5)}nav a:hover{color:rgba(255,255,255,.5)}}pre{overflow:auto;font-size:14px;line-height:140%;padding:1em}img{width:100%}</style><body><div><h1 class=title><a href=https://yanael.io/>Yanaël Barbier</a></h1><span class=subtitle>I build my path with an export!</span><nav><span><a href=/>Main</a></span>
+<span><a href=/days/>Day-to-day</a></span>
+<span><a href=/path/>Path</a></span>
+<span><a href=/networks/>Networks</a></span>
+<span><a href=/about/>About</a></span>
+<span><a href=/subscribe/>Subscribe</a></span></nav></div><main><article><header><h2>Hono with Server Sent Events</h2><div class=meta-date><time datetime=2023-10-21T00:00:00Z>21 October 2023</time></div></header><p><a href=https://hono.dev/>Hono</a>, a next-generation web framework, can be combined with Server-Sent Events (SSE) to create a real-time web applications with a focus on sending server updates to the client.</p><pre tabindex=0><code>  +--------+     +--------+
+  | Client |&lt;---&gt;| Server |
+  +---+----+     +----+---+
+      |               |
+      | 1. GET /sse   |
+      +--------------&gt;|
+      | 2. 200 OK     |
+      | (SSE Headers) |
+      |&lt;--------------+
+      | 3. Event 1    |
+      | &#39;data:...&#39;    |
+      |&lt;--------------+
+      | 4. Event 2    |
+      | &#39;data:...&#39;    |
+      |&lt;--------------+
+     ...             ...
+</code></pre><h2 id=introduction-to-hono-and-sse>Introduction to Hono and SSE</h2><p><a href=https://hono.dev/>Hono</a> is a cutting-edge web framework designed for the modern web and can run on any JavaScript runtime. When combined with <a href=https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events>SSE (Server-Sent Events)</a>, a protocol optimized for sending real-time updates from server to client, you can build web applications that are dynamic and responsive.</p><p>Imagine creating a live dashboard that updates its metrics without user interaction or a news feed that instantly displays new articles. This powerful combination makes it possible!</p><h2 id=setting-up-sse-with-hono>Setting up SSE with Hono</h2><h3 id=1-setting-headers>1. Setting Headers</h3><p>For SSE to function correctly, specific headers need to be set. By setting them up inside a middleware, we can ensure they&rsquo;re consistently applied.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#a6e22e>app</span>.<span style=color:#a6e22e>use</span>(<span style=color:#e6db74>&#39;/sse/*&#39;</span>, <span style=color:#66d9ef>async</span> (<span style=color:#a6e22e>c</span>, <span style=color:#a6e22e>next</span>) =&gt; {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>c</span>.<span style=color:#a6e22e>header</span>(<span style=color:#e6db74>&#39;Content-Type&#39;</span>, <span style=color:#e6db74>&#39;text/event-stream&#39;</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>c</span>.<span style=color:#a6e22e>header</span>(<span style=color:#e6db74>&#39;Cache-Control&#39;</span>, <span style=color:#e6db74>&#39;no-cache&#39;</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>c</span>.<span style=color:#a6e22e>header</span>(<span style=color:#e6db74>&#39;Connection&#39;</span>, <span style=color:#e6db74>&#39;keep-alive&#39;</span>);
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>await</span> <span style=color:#a6e22e>next</span>();
+</span></span><span style=display:flex><span>});
+</span></span></code></pre></div><p>These headers ensure the client maintains an open connection and receives the streamed events as intended.</p><h3 id=2-sending-data-with-sse-format>2. Sending Data with SSE Format</h3><p>With Hono, we can utilize its streaming feature to start streaming content:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#a6e22e>app</span>.<span style=color:#a6e22e>get</span>(<span style=color:#e6db74>&#39;/sse&#39;</span>, (<span style=color:#a6e22e>c</span>) =&gt; {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>c</span>.<span style=color:#a6e22e>stream</span>(<span style=color:#66d9ef>async</span> (<span style=color:#a6e22e>stream</span>) =&gt; {
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>stream</span>.<span style=color:#a6e22e>write</span>(<span style=color:#e6db74>&#39;data: hello\n\n&#39;</span>);
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>stream</span>.<span style=color:#a6e22e>write</span>(<span style=color:#e6db74>&#39;data: world\n\n&#39;</span>);
+</span></span><span style=display:flex><span>    });
+</span></span><span style=display:flex><span>});
+</span></span></code></pre></div><h3 id=3-using-custom-event-types>3. Using Custom Event Types</h3><p>Beyond basic data, SSE allows us to send custom event types to handle specific client-side actions:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#a6e22e>stream</span>.<span style=color:#a6e22e>write</span>(<span style=color:#e6db74>&#39;event: close\n&#39;</span>);
+</span></span><span style=display:flex><span><span style=color:#a6e22e>stream</span>.<span style=color:#a6e22e>write</span>(<span style=color:#e6db74>&#39;data: close\n\n&#39;</span>);
+</span></span></code></pre></div><h3 id=4-adding-event-ids>4. Adding Event IDs</h3><p>To keep track of events, especially useful for error recovery:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#a6e22e>stream</span>.<span style=color:#a6e22e>write</span>(<span style=color:#e6db74>&#39;id: 0\n&#39;</span>);
+</span></span></code></pre></div><h3 id=5-setting-retry-intervals>5. Setting Retry Intervals</h3><p>In case of a connection drop, instruct the client when to attempt a reconnection:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#a6e22e>stream</span>.<span style=color:#a6e22e>write</span>(<span style=color:#e6db74>&#39;retry: 1000\n&#39;</span>); <span style=color:#75715e>// In milliseconds
+</span></span></span></code></pre></div><h2 id=a-complete-hono-sse-endpoint-example>A Complete Hono-SSE Endpoint Example</h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=display:flex><span><span style=color:#66d9ef>import</span> { <span style=color:#a6e22e>Hono</span> } <span style=color:#a6e22e>from</span> <span style=color:#e6db74>&#39;hono&#39;</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>import</span> { <span style=color:#a6e22e>cors</span> } <span style=color:#a6e22e>from</span> <span style=color:#e6db74>&#39;hono/cors&#39;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>app</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Hono</span>()
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>app</span>.<span style=color:#a6e22e>use</span>(<span style=color:#e6db74>&#39;*&#39;</span>, <span style=color:#a6e22e>cors</span>(
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>origin</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;*&#39;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>allowMethods</span><span style=color:#f92672>:</span> [<span style=color:#e6db74>&#39;GET&#39;</span>],
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>allowHeaders</span><span style=color:#f92672>:</span> [<span style=color:#e6db74>&#39;Content-Type&#39;</span>],
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>))
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>app</span>.<span style=color:#a6e22e>get</span>(<span style=color:#e6db74>&#39;/&#39;</span>, (<span style=color:#a6e22e>c</span>) =&gt; <span style=color:#a6e22e>c</span>.<span style=color:#a6e22e>text</span>(<span style=color:#e6db74>&#39;Hello Hono!&#39;</span>))
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>app</span>.<span style=color:#a6e22e>use</span>(<span style=color:#e6db74>&#39;/sse/*&#39;</span>, <span style=color:#66d9ef>async</span> (<span style=color:#a6e22e>c</span>, <span style=color:#a6e22e>next</span>) =&gt; {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>c</span>.<span style=color:#a6e22e>header</span>(<span style=color:#e6db74>&#39;Content-Type&#39;</span>, <span style=color:#e6db74>&#39;text/event-stream&#39;</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>c</span>.<span style=color:#a6e22e>header</span>(<span style=color:#e6db74>&#39;Cache-Control&#39;</span>, <span style=color:#e6db74>&#39;no-cache&#39;</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>c</span>.<span style=color:#a6e22e>header</span>(<span style=color:#e6db74>&#39;Connection&#39;</span>, <span style=color:#e6db74>&#39;keep-alive&#39;</span>);
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>await</span> <span style=color:#a6e22e>next</span>();
+</span></span><span style=display:flex><span>});
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>app</span>.<span style=color:#a6e22e>get</span>(<span style=color:#e6db74>&#39;/sse&#39;</span>, (<span style=color:#a6e22e>c</span>) =&gt; {
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>c</span>.<span style=color:#a6e22e>stream</span>(<span style=color:#66d9ef>async</span> (<span style=color:#a6e22e>stream</span>) =&gt; {
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>stream</span>.<span style=color:#a6e22e>write</span>(<span style=color:#e6db74>&#39;retry: 1000\n&#39;</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>stream</span>.<span style=color:#a6e22e>write</span>(<span style=color:#e6db74>&#39;id: 0\n&#39;</span>);
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>stream</span>.<span style=color:#a6e22e>write</span>(<span style=color:#e6db74>&#39;data: hello\n\n&#39;</span>);
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>stream</span>.<span style=color:#a6e22e>write</span>(<span style=color:#e6db74>&#39;id: 1\n&#39;</span>);
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>stream</span>.<span style=color:#a6e22e>write</span>(<span style=color:#e6db74>&#39;data: world\n\n&#39;</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>stream</span>.<span style=color:#a6e22e>write</span>(<span style=color:#e6db74>&#39;event: close\n&#39;</span>);
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>stream</span>.<span style=color:#a6e22e>write</span>(<span style=color:#e6db74>&#39;data: close\n\n&#39;</span>);
+</span></span><span style=display:flex><span>    })
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>});
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>export</span> <span style=color:#66d9ef>default</span> <span style=color:#a6e22e>app</span>;
+</span></span></code></pre></div><h2 id=client-side-implementation>Client-Side Implementation</h2><p>To use the power of SSE on the client side, a simple listener can be implemented:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span><span style=color:#75715e>&lt;!DOCTYPE html&gt;</span>
+</span></span><span style=display:flex><span>&lt;<span style=color:#f92672>html</span>&gt;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>&lt;<span style=color:#f92672>head</span>&gt;
+</span></span><span style=display:flex><span>    &lt;<span style=color:#f92672>meta</span> <span style=color:#a6e22e>charset</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;UTF-8&#34;</span>&gt;
+</span></span><span style=display:flex><span>    &lt;<span style=color:#f92672>title</span>&gt;SSE Example&lt;/<span style=color:#f92672>title</span>&gt;
+</span></span><span style=display:flex><span>&lt;/<span style=color:#f92672>head</span>&gt;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>&lt;<span style=color:#f92672>body</span>&gt;
+</span></span><span style=display:flex><span>    &lt;<span style=color:#f92672>h1</span>&gt;SSE Example&lt;/<span style=color:#f92672>h1</span>&gt;
+</span></span><span style=display:flex><span>    &lt;<span style=color:#f92672>div</span> <span style=color:#a6e22e>id</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;sse-data&#34;</span>&gt;&lt;/<span style=color:#f92672>div</span>&gt;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    &lt;<span style=color:#f92672>script</span>&gt;
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>baseURL</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;http://localhost:3000&#34;</span>;
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>sseData</span> <span style=color:#f92672>=</span> document.<span style=color:#a6e22e>getElementById</span>(<span style=color:#e6db74>&#39;sse-data&#39;</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>eventSource</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>EventSource</span>(<span style=color:#e6db74>`</span><span style=color:#e6db74>${</span><span style=color:#a6e22e>baseURL</span><span style=color:#e6db74>}</span><span style=color:#e6db74>/sse`</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>eventSource</span>.<span style=color:#a6e22e>onmessage</span> <span style=color:#f92672>=</span> (<span style=color:#a6e22e>event</span>) =&gt; {
+</span></span><span style=display:flex><span>            <span style=color:#a6e22e>sseData</span>.<span style=color:#a6e22e>innerHTML</span> <span style=color:#f92672>+=</span> <span style=color:#a6e22e>event</span>.<span style=color:#a6e22e>data</span> <span style=color:#f92672>+</span> <span style=color:#e6db74>&#39;&lt;br&gt;&#39;</span>;
+</span></span><span style=display:flex><span>        };
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>eventSource</span>.<span style=color:#a6e22e>addEventListener</span>(<span style=color:#e6db74>&#34;close&#34;</span>, (<span style=color:#a6e22e>event</span>) =&gt; {
+</span></span><span style=display:flex><span>            <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#39;Received &#34;close&#34; event. Closing connection...&#39;</span>);
+</span></span><span style=display:flex><span>            <span style=color:#a6e22e>eventSource</span>.<span style=color:#a6e22e>close</span>();
+</span></span><span style=display:flex><span>        });
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>eventSource</span>.<span style=color:#a6e22e>onerror</span> <span style=color:#f92672>=</span> (<span style=color:#a6e22e>error</span>) =&gt; {
+</span></span><span style=display:flex><span>            <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>error</span>(<span style=color:#e6db74>&#39;EventSource error:&#39;</span>, <span style=color:#a6e22e>error</span>);
+</span></span><span style=display:flex><span>        };
+</span></span><span style=display:flex><span>    &lt;/<span style=color:#f92672>script</span>&gt;
+</span></span><span style=display:flex><span>&lt;/<span style=color:#f92672>body</span>&gt;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>&lt;/<span style=color:#f92672>html</span>&gt;
+</span></span></code></pre></div><p>Visit the page in your browser, and watch as SSE seamlessly delivers server updates.</p><h2 id=conclusion>Conclusion</h2><p>Combining Hono with SSE opens doors to real-time, dynamic web applications.</p><p>Consider exploring advanced Hono features and more about SSE:</p><ul><li><a href=https://hono.dev/>Hono</a></li><li><a href=https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events>SSE (Server-Sent Events)</a></li></ul><hr><p>Receive my stream of work on:</p><ul><li><a href=https://twitter.com/YanaelBarbier>X/Twitter</a></li><li><a href=https://www.threads.net/@yanaelbarbier>Threads</a></li><li><a href=https://github.com/st3w4r>GitHub</a></li></ul></article></main></body></html>

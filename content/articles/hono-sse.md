@@ -178,6 +178,10 @@ Consider exploring advanced Hono features and more about SSE:
 - [Hono](https://hono.dev/) 
 - [SSE (Server-Sent Events)](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events)
 
+## Code
+
+- [Code on GitHub](https://github.com/st3w4r/hono-sse/)
+
 ---
 Receive my stream of work on:
 - [X/Twitter](https://twitter.com/YanaelBarbier)

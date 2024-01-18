@@ -129,6 +129,10 @@
 &lt;li>&lt;a href="https://hono.dev/">Hono&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events">SSE (Server-Sent Events)&lt;/a>&lt;/li>
 &lt;/ul>
+&lt;h2 id="code">Code&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/st3w4r/hono-sse/">Code on GitHub&lt;/a>&lt;/li>
+&lt;/ul>
 &lt;hr>
 &lt;p>Receive my stream of work on:&lt;/p>
 &lt;ul>

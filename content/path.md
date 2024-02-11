@@ -2,9 +2,7 @@
 title: "Path"
 date: 2023-07-09T00:00:00Z
 draft: false
-menu:
-    main:
-        weight: -70
+
 ---
 
 It’s a small world, so I just want to share some places where I used to live.

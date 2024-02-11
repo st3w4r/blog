@@ -14,22 +14,14 @@ Startups and Silicon Valley enthusiast, I spent some time in the Bay Area, drink
 I like to chat with people when it starts with:  
 > _I don’t shave, I drink coffee and The Art of UNIX Programming is on my nightstand._
 
-If you want to know more: [Ping me!](/networks)
+<!-- If you want to know more: [Ping me!](/networks) -->
 
-<!-- # Networks {#networks}
-
-[The Social Network](https://en.wikipedia.org/wiki/The_Social_Network) one of my most inspiring movie but you'll not find the Zuck's website in this list:
-
-- [Twitter](https://twitter.com/YanaelBarbier)
-- [GitHub](https://github.com/st3w4r)
-- [LinkedIn](https://www.linkedin.com/in/yanaelbarbier/?locale=en_US)
-
-# Path {#path}
+### Path
 
 It’s a small world, so I just want to share some places where I used to live.
-`export PATH=`
-
-- Porto, Portugal, May 2021  - Currently
+export PATH=
+- London, UK, January 2022 - Present
+- Porto, Portugal, 7 months 2021
 - Lisbon, Portugal, 7 months 2020 - 2021
 - London, UK, 1 year 2019 - 2020
 - Cary, North Carolina, USA, 2 months 2019
@@ -39,5 +31,17 @@ It’s a small world, so I just want to share some places where I used to live.
 - Barcelona, Spain, 2 months 2014
 - Grenoble, France, 2 years 2012-2014
 - Tournon-sur-Rhône, Ardèche, France, 3 years  2009 - 2012
-- Home sweet home, Ardèche, France 16 years 1993 - 2009 -->
+- Home sweet home, Ardèche, France 16 years 1993 - 2009
 
+### The Social Networks {#networks}
+- [X/Twitter](https://twitter.com/YanaelBarbier)
+- [Threads](https://www.threads.net/@yanaelbarbier)
+- [GitHub](https://github.com/st3w4r)
+- [LinkedIn](https://www.linkedin.com/in/yanaelbarbier/?locale=en_US)
+- [RSS]({{< rssurl html >}})
+
+
+### Newsletter
+
+{{< subscribe html >}}
+{{< js >}}

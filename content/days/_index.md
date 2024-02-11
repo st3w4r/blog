@@ -1,8 +1,6 @@
 ---
 date: 2020-05-10
-menu:
-    main:
-        weight: -80
+
 title: "Day-to-day"
 draft: false
 ---

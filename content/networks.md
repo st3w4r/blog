@@ -2,9 +2,7 @@
 title: "Networks"
 date: 2023-10-17T00:00:00Z
 draft: false
-menu:
-    main:
-        weight: -60
+
 ---
 
 Send me some packets here:

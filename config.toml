@@ -14,7 +14,7 @@ theme = "neutral"
 [menu]
 
   [[menu.main]]
-    name = "Main"
+    name = "Blog"
     url = "/"
     weight = -100
 

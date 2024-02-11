@@ -8,15 +8,10 @@
         {{ end}}
         {{ if eq .Type "article" }}
         <div class='meta-date'>
-            <time datetime="{{.Date.Format "2006-01-02T15:04:05Z0700" }}">{{ .Date.Format "2 January 2006" }}</time>
+            <time datetime="{{.Date.Format " 2006-01-02T15:04:05Z0700" }}">{{ .Date.Format "2 January 2006" }}</time>
         </div>
         {{ end }}
     </header>
     {{ .Content }}
-    {{ if eq .Type "page" }}
-        <footer>
-            <p>Updated on {{ .Date.Format "2 January 2006" }}</p>
-        </footer>
-    {{ end }}
 </article>
 {{ end }}

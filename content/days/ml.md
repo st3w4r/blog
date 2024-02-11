@@ -11,9 +11,9 @@ Machine Learning and Deep Learning are trendy topics and it is a promising area.
 
 ---
 
-[March 2020 - 13 days]({{< ref "/days/ml#2020-03-17">}})\
-[April 2020 - 21 days]({{< ref "/days/ml#2020-04-01">}})\
-[next]({{< ref "/days/ml#2020-04-30">}})
+[march 2020]({{< ref "/days/ml#2020-03-17">}})\
+[april 2020]({{< ref "/days/ml#2020-04-01">}})\
+[latest]({{< ref "/days/ml#2020-04-30">}})
 
 ---
 

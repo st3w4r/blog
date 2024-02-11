@@ -11,16 +11,17 @@ Machine Learning and Deep Learning are trendy topics and it is a promising area.
 
 ---
 
-[2020-03-17]({{< ref "/days/ml#2020-03-17" >}})  
-[2020-03-18]({{< ref "/days/ml#2020-03-18" >}})  
-[2020-03-19]({{< ref "/days/ml#2020-03-19" >}})  
-[2020-03-20]({{< ref "/days/ml#2020-03-20" >}})  
-[2020-03-21]({{< ref "/days/ml#2020-03-21" >}})  
-[2020-03-22]({{< ref "/days/ml#2020-03-22" >}})  
-[2020-03-23]({{< ref "/days/ml#2020-03-23" >}})  
-[2020-03-24]({{< ref "/days/ml#2020-03-24" >}})  
-[2020-03-25]({{< ref "/days/ml#2020-03-25" >}})  
-[2020-03-26]({{< ref "/days/ml#2020-03-26" >}})  
+[2020-03-17]({{< ref "/days/ml#2020-03-17" >}})\
+[2020-03-18]({{< ref "/days/ml#2020-03-18" >}})\
+[2020-03-19]({{< ref "/days/ml#2020-03-19" >}})\
+[2020-03-20]({{< ref "/days/ml#2020-03-20" >}})\
+[2020-03-21]({{< ref "/days/ml#2020-03-21" >}})\
+[2020-03-22]({{< ref "/days/ml#2020-03-22" >}})\
+[2020-03-23]({{< ref "/days/ml#2020-03-23" >}})\
+[2020-03-24]({{< ref "/days/ml#2020-03-24" >}})\
+[2020-03-25]({{< ref "/days/ml#2020-03-25" >}})\
+[2020-03-26]({{< ref "/days/ml#2020-03-26" >}})\
+[2020-03-27]({{< ref "/days/ml#2020-03-27" >}})
 
 ---
 
@@ -253,6 +254,35 @@ Segmentation creates a labialization pixel per pixel.
 - Difference between online and offline ML
     - Offline: Static dataset
     - Online: Continuously train when the data comes in. a.k.a incremental learning
+
+## [2020-03-27]({{< ref "/days/ml#2020-03-27" >}}) {#2020-03-27}
+
+Using progressive resizing to train the model.
+
+If underfitting, train longer, train last part reduce learning rate, decrease regularization.
+
+U-Net for segmentation training
+
+Learning rate should be high at the begging and reduce after. Don't be locked in to find the smallest.
+
+After each linear regression use an activation function.\
+The sigmoid is not used anymore.\
+Mostly used now:\
+ReLU: Rectified Linear Unit → ReLU activation\
+`max(x,0)`
+
+[A visual proof that neural nets can compute any function](http://neuralnetworksanddeeplearning.com/chap4.html)\
+[Activation Functions in Neural Networks](https://towardsdatascience.com/activation-functions-neural-networks-1cbd9f8d91d6)
+
+Imagenet expect 3 channels, if we have only 2 channels we can create a new channel set as 0.
+
+Tasks:
+- Practice data block API
+- Multi label classification
+- Segmentation
+- NLP classification
+- Implement MSE
+- Practice ReLU
 
 
 ## NeXT

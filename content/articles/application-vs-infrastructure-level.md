@@ -137,7 +137,7 @@ Distributing your service through an API allows you to manage who can access it 
 
 ## In the wild
 
-If you look at [Sentry.io](http://sentry.io) this tool is a perfect example, they chose to entirely [open source](https://github.com/getsentry/sentry) the product and they also provide Sentry as a SaaS. The product manages only one organization. To manage multiple organizations as they do for their SaaS, they have built other tools to manage multiple instances.
+If you look at [Sentry.io](http://sentry.io) this tool is a perfect example, they chose to entirely [open source](https://github.com/getsentry/sentry) the product and they also provide Sentry as a SaaS. The product manages one or multi-organizations. To manage multiple organizations as they do for their SaaS, they have implemented [multi-tenancy & tenant isolation](https://blog.sentry.io/how-to-build-saas-application/).
 
 GitLab has the same pattern, they have an open-source version and they have a cloud service you can directly subscribe to, and they manage the instance for you. The open-source version is only for one organization; if you want to have **multiple organizations you need to start new instances**. So this is handled at an infrastructure level.
 
